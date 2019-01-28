@@ -1,4 +1,4 @@
-@extends('public.layout')
+@extends('layouts.app')
 
 @section('title', 'Concierto')
 

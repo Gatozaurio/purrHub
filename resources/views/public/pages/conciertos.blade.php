@@ -1,4 +1,4 @@
-@extends('/public/layout')
+@extends('layouts.app')
 
 @section('title', 'Conciertos')
 
@@ -33,6 +33,7 @@
 
 
 <div class="d-flex justify-content-center mt-4">
+
 	{{ $concerts->links() }}
 </div>
 

@@ -15,21 +15,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="/conciertos">Conciertos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/artistas">Artistas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/calendario">Calendario</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/contacto">Contacto</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/acercade">Acerca de</a>
-            </li>
+            
           </ul>
         </div>
       </nav>

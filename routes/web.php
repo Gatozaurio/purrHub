@@ -21,10 +21,14 @@ Route::get('/contacto', 'PagesController@contacto');
 // Rutas para la entidad Concerts
 Route::get('/conciertos/crear', 'ConcertsController@create');
 Route::post('/conciertos', 'ConcertsController@store');
-Route::get('/conciertos/{id}/editar', 'ConcertsController@edit');
-Route::patch('/conciertos/{id}', 'ConcertsController@update');
-Route::delete('/conciertos/{id}', 'ConcertsController@destroy');
-Route::get('/conciertos/{id}', 'ConcertsController@show');
+Route::get('/conciertos/{concert}/editar', 'ConcertsController@edit');
+Route::patch('/conciertos/{concert}', 'ConcertsController@update');
+Route::delete('/conciertos/{concert}', 'ConcertsController@destroy');
+Route::get('/conciertos/{concert}', 'ConcertsController@show');
 
 
 // Route::resource('/concerts', 'ConcertsController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

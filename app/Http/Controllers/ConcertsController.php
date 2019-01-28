@@ -72,11 +72,10 @@ class ConcertsController extends Controller
      * @param  \App\Concert  $concert
      * @return \Illuminate\Http\Response
      */
-    public function edit(Concert $concierto)
+    public function edit(Concert $concert)
     {
         //$concert = \App\Concert::findOrFail($id);
-
-        return view('public.conciertos.edit', ['concierto' => $concierto]);
+        return view('public.conciertos.edit', ['concert' => $concert]);
     }
 
     /**
@@ -111,9 +110,9 @@ class ConcertsController extends Controller
      * @param  \App\Concert  $concert
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Concert $concert)
     {
-        $concert = \App\Concert::findOrFail($id)->delete();
+        $concert->delete();
 
         return redirect('/conciertos');
     }

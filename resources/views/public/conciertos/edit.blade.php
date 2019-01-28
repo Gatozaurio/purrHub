@@ -1,9 +1,9 @@
-@extends('public.layout')
+@extends('layouts.app')
 
 @section('title', 'Editar concierto')
 
 @section('content')
-<form action="/conciertos/{{$concierto->id}}" method="post" novalidate>
+<form action="/conciertos/{{$concert->id}}" method="post" novalidate>
 
  <!-- {{ csrf_field()}} -->
  @csrf <!-- Certificate Signing Request - Crea las sesiones -->
