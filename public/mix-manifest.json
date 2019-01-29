@@ -1,5 +1,7 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
-    "/css/formularios/formulario.css": "/css/formularios/formulario.css"
+    "/css/formularios/formulario.css": "/css/formularios/formulario.css",
+    "/css/concierto/concierto.css": "/css/concierto/concierto.css",
+    "/js/concierto/concierto.js": "/js/concierto/concierto.js"
 }

@@ -12,5 +12,7 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-   .sass('resources/sass/app.scss', 'public/css')
-   .sass('resources/sass/formularios/formulario.scss', 'public/css/formularios/')
+	.js('resources/js/concierto/concierto.js', 'public/js/concierto/')
+	.sass('resources/sass/app.scss', 'public/css')
+	.sass('resources/sass/formularios/formulario.scss', 'public/css/formularios/')
+	.sass('resources/sass/concierto/concierto.scss', 'public/css/concierto/');

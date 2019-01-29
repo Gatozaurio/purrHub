@@ -23,8 +23,14 @@
 </div>
 
 <div class="mt-5">
-	<h3><strong>Información</strong></h3>
+	<button id="botonToggle" class="btn btn-primary collapsed" type="button" data-toggle="collapse" data-target="#informacion" aria-expanded="false" aria-controls="informacion">Más info</button>
 	<hr>
-	<h5>{{ $concierto['info'] }}</h5>
+	<h5 id="informacion" class="collapse">{{ $concierto['info'] }}</h5>
 </div>
 @endsection
+@push('scripts')
+	<script src="{{ mix('/js/concierto/concierto.js') }}" defer ></script>
+@endpush
+@push('estilos')
+	<link href="{{ mix('/css/concierto/concierto.css') }}" rel="stylesheet">
+@endpush
