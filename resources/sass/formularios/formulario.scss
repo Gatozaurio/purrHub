@@ -1,0 +1,41 @@
+@import 'variables';
+
+$listaInputs: (Sencillo, Valido, Invalido);
+
+.titulo{
+	color:$colorBordeInputSencillo;
+}
+
+.input{
+	border: solid 2px;
+}
+
+
+@each $input in $listaInputs {
+	.input#{input}{
+		@extend .input;
+	}
+}
+
+.inputSencillo{
+	border-color: $colorBordeInputSencillo;
+	background-color: $colorInputSencillo;
+}
+
+.inputValido{
+	border-color: $colorBordeInputValido;
+	background-color: $colorInputValido;
+}
+
+.inputInvalido{
+	border-color: $colorBordeInputInvalido;
+	background-color: $colorInputInvalido;
+}
+
+// @each $input in $listaInputs {
+// 	.input#{input}{
+// 		@extend .input;
+// 		border-color: $colorBordeInput#{input};
+// 		background-color: $colorInput#{input};
+// 	}
+// }

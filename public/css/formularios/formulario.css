@@ -1,0 +1,24 @@
+.titulo {
+  color: #fa5312;
+}
+
+.input,
+.inputinput {
+  border: solid 2px;
+}
+
+.inputNormal {
+  border-color: #fa5312;
+  background-color: #ffdc7a;
+}
+
+.inputValido {
+  border-color: #008000;
+  background-color: #A0DB8E;
+}
+
+.inputInvalido {
+  border-color: #990000;
+  background-color: #FF4444;
+}
+
