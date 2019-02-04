@@ -48108,6 +48108,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/sass/eventos/eventos.scss":
+/*!*********************************************!*\
+  !*** ./resources/sass/eventos/eventos.scss ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/sass/formularios/formulario.scss":
 /*!****************************************************!*\
   !*** ./resources/sass/formularios/formulario.scss ***!
@@ -48120,16 +48131,17 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 0:
-/*!****************************************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/formularios/formulario.scss ./resources/sass/concierto/concierto.scss ***!
-  \****************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/formularios/formulario.scss ./resources/sass/concierto/concierto.scss ./resources/sass/eventos/eventos.scss ***!
+  \******************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /home/gato/Sites/purrhub/resources/js/app.js */"./resources/js/app.js");
 __webpack_require__(/*! /home/gato/Sites/purrhub/resources/sass/app.scss */"./resources/sass/app.scss");
 __webpack_require__(/*! /home/gato/Sites/purrhub/resources/sass/formularios/formulario.scss */"./resources/sass/formularios/formulario.scss");
-module.exports = __webpack_require__(/*! /home/gato/Sites/purrhub/resources/sass/concierto/concierto.scss */"./resources/sass/concierto/concierto.scss");
+__webpack_require__(/*! /home/gato/Sites/purrhub/resources/sass/concierto/concierto.scss */"./resources/sass/concierto/concierto.scss");
+module.exports = __webpack_require__(/*! /home/gato/Sites/purrhub/resources/sass/eventos/eventos.scss */"./resources/sass/eventos/eventos.scss");
 
 
 /***/ })
