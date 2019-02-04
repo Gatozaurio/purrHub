@@ -14,6 +14,7 @@ const mix = require('laravel-mix');
 mix.js('resources/js/app.js', 'public/js')
 	.js('resources/js/concierto/concierto.js', 'public/js/concierto/')
 	.js('resources/js/eventos/eventos.js', 'public/js/eventos/')
+	.js('resources/js/formularios/formularios.js', 'public/js/formularios/')
 	.sass('resources/sass/app.scss', 'public/css')
 	.sass('resources/sass/formularios/formulario.scss', 'public/css/formularios/')
 	.sass('resources/sass/concierto/concierto.scss', 'public/css/concierto/')
