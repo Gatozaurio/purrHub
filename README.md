@@ -1,4 +1,8 @@
-## Instrucciones de instalación
+# Purrhub
+
+[Installation](#installation)
+
+## ##-Installation
 
 Para poder comenzar a utilizar correctamente la aplicación se deben seguir los siguientes pasos:
 

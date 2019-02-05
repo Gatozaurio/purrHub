@@ -20,24 +20,28 @@
 
 <div class="row">
   @forelse ($concerts as $concert)
+	<div class=" mr-lg-4 mr-md-2 mt-4 col-12 col-lg-3 col-md-6">
+	<div class="card" style="width: 18rem;">
+		<div class="card-header">
+			<h5 class="text-center"><strong>{{ $concert['name'] }}</strong></h5>
+		</div>
+		<div class="card-body">
+			<img class="card-img-top" class="img-responsive img-rounded" src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.pexels.com%2Fphotos%2F1047442%2Fpexels-photo-1047442.jpeg%3Fauto%3Dcompress%26cs%3Dtinysrgb%26h%3D350&f=1" alt="Concierto">
+			<h6 class="card-subtitle my-2 text-muted">{{ $concert['price'] }} €</h6>
+			<h5 class="card-text">{{ $concert['location'] }}</h5>
+			<div class='btn-group'>
+	     		<a href="/conciertos/{{ $concert['slug'] }}" class="btn btn-primary border border-primary rounded mr-1"><i class="fas fa-eye"></i></a>
+	     		<a href="/conciertos/{{ $concert['id'] }}/editar" class="btn btn-primary border border-primary rounded mx-1"><i class="fas fa-edit"></i></a>
 
-  <div class="card mr-4 mt-4" style="width: 18rem;">
-   <div class="card-body">
-     <h5 class="card-title">{{ $concert['name'] }}</h5>
-     <h6 class="card-subtitle mb-2 text-muted">{{ $concert['price'] }} €</h6>
-     <p class="card-text">{{ $concert['location'] }}</p>
-     <div class='btn-group'>
-     <a href="/conciertos/{{ $concert['slug'] }}" class="btn btn-primary border border-primary rounded mr-1">Ver</a>
-     <a href="/conciertos/{{ $concert['id'] }}/editar" class="btn btn-primary border border-primary rounded mx-1">Editar</a>
-
-     <form action="/conciertos/{{ $concert['id'] }}" method="post">
-      @csrf
-      @method('delete')
-      <button type="submit" class="btn btn-danger ml-5">Borrar</a>
-     </form>
-    </div>
-   </div>
-  </div>
+	     		<form action="/conciertos/{{ $concert['id'] }}" method="post">
+	      			@csrf
+	      			@method('delete')
+	      			<button type="submit" class="btn btn-danger ml-lg-5"><i class="fas fa-trash-alt"></i></a>
+	     		</form>
+	    	</div>
+   		</div>
+	</div>
+</div>
   @empty
     <p>No hay conciertos</p>
   @endforelse
