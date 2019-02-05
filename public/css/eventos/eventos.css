@@ -1,4 +1,10 @@
 .dropdownPulsado {
+  border: solid 3px #143D00;
   background-color: #143D00;
+  color: #FFFFFF;
+}
+
+.dropdownPulsado:hover {
+  color: #FFFFFF;
 }
 

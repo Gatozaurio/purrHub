@@ -1,9 +1,3 @@
-@extends('layouts.app')
-
-@section('title', 'Conciertos')
-
-@section('content')
-
 
 <h1>Lista de conciertos</h1>
 <div id="crearEventos"  class="dropdown">
@@ -53,12 +47,3 @@
 <div class="d-flex justify-content-center mt-4">
    {{ $concerts->links() }}
 </div>
-
-
-@endsection
-@push('scripts')
-	<script src="{{ mix('/js/eventos/eventos.js') }}" defer ></script>
-@endpush
-@push('estilos')
-	<link href="{{ mix('/css/eventos/eventos.css') }}" rel="stylesheet">
-@endpush
