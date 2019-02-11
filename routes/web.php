@@ -13,7 +13,7 @@
 
 Route::get('/', 'PagesController@index');
 Route::get('/conciertos', 'PagesController@conciertos');
-Route::get('/artistas', 'PagesController@artistas');
+// Route::get('/artistas', 'PagesController@artistas');
 Route::get('/calendario', 'PagesController@calendario');
 Route::get('/acercade', 'PagesController@acercade');
 Route::get('/contacto', 'PagesController@contacto');
@@ -26,6 +26,14 @@ Route::patch('/conciertos/{concert}', 'ConcertsController@update');
 Route::delete('/conciertos/{concert}', 'ConcertsController@destroy');
 Route::get('/conciertos/{concert}', 'ConcertsController@show');
 
+// Rutas para la entidad ArtistsController
+Route::get('/artistas', 'ArtistsController@index');
+Route::get('/artistas/crear', 'ArtistsController@create');
+Route::post('/artistas', 'ArtistsController@store');
+Route::get('/artistas/{artist}/editar', 'ArtistsController@edit');
+Route::patch('/artistas/{artist}', 'ArtistsController@update');
+Route::delete('/artistas/{artist}', 'ArtistsController@destroy');
+Route::get('/artistas/{artist}', 'ArtistsController@show');
 
 // Route::resource('/concerts', 'ConcertsController');
 
