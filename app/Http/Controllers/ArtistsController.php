@@ -63,7 +63,7 @@ class ArtistsController extends Controller
 	    {
 	        $artist = Artist::where('slug', $slug)->firstOrFail();
 
-	        return view('public.artists.show', ['artist' => $artist]);
+	        return view('public.artistas.show', ['artist' => $artist]);
 	    }
 
 

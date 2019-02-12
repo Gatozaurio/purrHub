@@ -26,7 +26,7 @@ Route::patch('/conciertos/{concert}', 'ConcertsController@update');
 Route::delete('/conciertos/{concert}', 'ConcertsController@destroy');
 Route::get('/conciertos/{concert}', 'ConcertsController@show');
 
-// Rutas para la entidad ArtistsController
+// Rutas para la entidad Artists
 Route::get('/artistas', 'ArtistsController@index');
 Route::get('/artistas/crear', 'ArtistsController@create');
 Route::post('/artistas', 'ArtistsController@store');

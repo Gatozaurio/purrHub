@@ -25,7 +25,6 @@ class ConcertRequest extends FormRequest
     {
         return [
             'name'			=>	'required|min:2|max:50',
-			'artists'			=>	'required|min:2|max:1500',
 			'price'			=>	'required|numeric',
 			'city'			=>	'required|min:3|max:30',
 			'location'			=>	'required|min:3|max:50',
@@ -43,10 +42,6 @@ class ConcertRequest extends FormRequest
 			'name.required'		=>	'Debe introducir el :attribute',
 			'name.min'		=>	'El :attribute debe tener al menos 2 caracteres',
 			'name.max'		=>	'El :attribute no puede exceder los 50 caracteres',
-
-			'artists.required'		=>	'Debe introducir los :attribute',
-			'artists.min'		=>	'Los :attribute deben tener al menos 2 caracteres',
-			'artists.max'		=>	'Los :attribute no pueden exceder los 1500 caracteres',
 
 			'price.required'		=>	'Debe introducir el :attribute',
 			'price.numeric'		=>	'El :attribute debe ser un número',
@@ -82,7 +77,6 @@ class ConcertRequest extends FormRequest
 	{
 		return [
 			'name' => 'nombre del evento',
-			'artists' => 'artistas del evento',
 			'price' => 'precio del evento',
 			'city' => 'ciudad',
 			'location' => 'ubicación del evento',

@@ -8,7 +8,8 @@ $factory->define(App\Artist::class, function (Faker $faker) {
     return [
         'name' => $name,
 		'slug' => str_slug($name, "-"),
-		'image' => $faker->imageUrl($width = 640, $height = 480, 'people'),
+		//'image' => $faker->imageUrl($width = 640, $height = 480, 'people', true, false, '$name'),
+		'image' => 'http://lorempixel.com/400/400/people/'.rand(0,10),
 		'info' => $faker->words(rand(10,50), true),
 		'web' => $faker->url(),
 		'spotify' => 'https://www.spotify.com/es/',

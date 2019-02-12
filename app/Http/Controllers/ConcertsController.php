@@ -39,7 +39,6 @@ class ConcertsController extends Controller
         Concert::create([
 			'name' => request('name'),
 			'slug' => str_slug(request('name'), "-"),
-	        'artists' =>request('artists'),
 	        'price' => request('price'),
 	        'city' => request('city'),
 	        'location' => request('location'),
@@ -90,7 +89,6 @@ class ConcertsController extends Controller
 		$concert->update([
 			'name' => request('name'),
 			'slug' => str_slug(request('name'), "-"),
-	        'artists' =>request('artists'),
 	        'price' => request('price'),
 	        'city' => request('city'),
 	        'location' => request('location'),

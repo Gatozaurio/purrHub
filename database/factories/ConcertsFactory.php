@@ -7,7 +7,6 @@ $factory->define(App\Concert::class, function (Faker $faker) {
     return [
 		'name' =>  $name,
 		'slug' => str_slug($name, "-"),
-        'artists' => $name,
 		'price' => $faker->randomFloat(2, 0, 130),
 		'city' => $faker->city,
 		'location' => $faker->cityPrefix . " " . $faker->streetSuffix,
