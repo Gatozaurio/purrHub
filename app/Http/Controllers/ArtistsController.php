@@ -75,7 +75,7 @@ class ArtistsController extends Controller
 		*/
 		public function edit(Artist $artist)
 		{
-			return view('public.artists.edit', ['artist' =>	$artist]);
+			return view('public.artistas.edit', ['artist' =>	$artist]);
 		}
 
 		/**
@@ -100,7 +100,7 @@ class ArtistsController extends Controller
 		        'facebook' => request('facebook')
 			]);
 
-	        return redirect('/artists/'.$artist->slug);
+	        return redirect('/artistas/'.$artist->slug);
 	    }
 
 		/**
@@ -113,7 +113,7 @@ class ArtistsController extends Controller
 	    {
 	        $artist->delete();
 
-	        return redirect('/artists');
+	        return redirect('/artistas');
 	    }
 
 }
