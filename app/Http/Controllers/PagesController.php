@@ -12,17 +12,6 @@ class PagesController extends Controller
       return view('public.pages.index');
     }
 
-    public function conciertos()
-    {
-      $conciertos = \App\Concert::paginate(12);
-      return view('public.pages.conciertos', ['concerts' => $conciertos]);
-    }
-
-    public function artistas()
-    {
-      return view('public.pages.artistas');
-    }
-
     public function calendario()
     {
       return view('public.pages.calendario');

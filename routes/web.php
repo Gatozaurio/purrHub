@@ -12,13 +12,13 @@
 */
 
 Route::get('/', 'PagesController@index');
-Route::get('/conciertos', 'PagesController@conciertos');
 // Route::get('/artistas', 'PagesController@artistas');
 Route::get('/calendario', 'PagesController@calendario');
 Route::get('/acercade', 'PagesController@acercade');
 Route::get('/contacto', 'PagesController@contacto');
 
 // Rutas para la entidad Concerts
+Route::get('/conciertos', 'ConcertsController@index');
 Route::get('/conciertos/crear', 'ConcertsController@create');
 Route::post('/conciertos', 'ConcertsController@store');
 Route::get('/conciertos/{concert}/editar', 'ConcertsController@edit');

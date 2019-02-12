@@ -15,7 +15,8 @@ class ConcertsController extends Controller
      */
     public function index()
     {
-        return redirect('/');
+		$conciertos = Concert::paginate(12);
+		return view('public.conciertos.index', ['concerts' => $conciertos]);
     }
 
     /**
