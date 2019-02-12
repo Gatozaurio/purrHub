@@ -6,12 +6,7 @@
 
 
 <h1>Lista de artistas</h1>
-<div id="crearEventos"  class="dropdown">
-   <button id="botonCrearEventos" class="btn btn-success mb-10"
-		   type="button">
-	   Nuevo artista
-   </button>
-</div>
+   <a href="/artistas/crear" class="btn btn-success mb-10">Nuevo artista</a>
 
 <div class="row">
  @forelse ($artists as $artist)

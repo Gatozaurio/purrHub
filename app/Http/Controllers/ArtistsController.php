@@ -37,7 +37,7 @@ class ArtistsController extends Controller
      */
     public function store(ArtistRequest $request)
     {
-        Concert::create([
+        Artist::create([
 			'name' => request('name'),
 			'slug' => str_slug(request('name'), "-"),
 	        'image' =>request('image'),

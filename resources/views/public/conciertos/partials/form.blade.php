@@ -8,15 +8,6 @@
 @endif
 </div>
 
-<div class="form-group">
- <label for="artists">Artistas</label>
- <textarea class="form-control {{ $errors->has('artists')?"is-invalid":""}}" id="artists" name="artists" placeholder="Artistas que participan">{{ isset($concert)?$concert->artists : old('artists') }}</textarea>
- @if ( $errors->has('artists') )
- <div class="invalid-feedback">
-  {{ $errors->first('artists') }}
- </div>
-@endif
-</div>
 
 <div class="form-group">
  <label for="price">Precio</label>
