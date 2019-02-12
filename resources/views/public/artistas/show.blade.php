@@ -14,14 +14,14 @@
 </div>
 
 <div class="mt-3">
-	<ul>
-		<li><a href="{{ $artist['web'] }}">Web oficial</a></li>
-		<li><a href="{{ $artist['spotify'] }}">Spotify</a></li>
-		<li><a href="{{ $artist['youtube'] }}">Youtube</a></li>
-		<li><a href="{{ $artist['instagram'] }}">Instagram</a></li>
-		<li><a href="{{ $artist['twitter'] }}">Twitter</a></li>
-		<li><a href="{{ $artist['facebook'] }}">facebook</a></li>
-	</ul>
+	 <div class='btn-group'>
+		<a href="{{ $artist['web'] }}" class="mr-2"><i class="fas fa-globe-europe"></i></a>
+		<a href="{{ $artist['spotify'] }}" class="mr-2"><i class="fab fa-spotify"></i></a>
+		<a href="{{ $artist['youtube'] }}" class="mr-2"><i class="fab fa-youtube"></i></a>
+		<a href="{{ $artist['instagram'] }}" class="mr-2"><i class="fab fa-instagram"></i></a>
+		<a href="{{ $artist['twitter'] }}" class="mr-2"><i class="fab fa-twitter"></i></a>
+		<a href="{{ $artist['facebook'] }}" class="mr-2"><i class="fab fa-facebook"></i></a>
+	</div>
 </div>
 
 @endsection
