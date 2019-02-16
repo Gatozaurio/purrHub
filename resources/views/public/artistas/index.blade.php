@@ -10,7 +10,7 @@
 
 <div class="row">
  @forelse ($artists as $artist)
-   <div class=" mr-lg-4 mr-md-2 mt-4 col-12 col-lg-3 col-md-6">
+   <div data-idElemento="{{ $artist['id'] }}" class=" mr-lg-4 mr-md-2 mt-4 col-12 col-lg-3 col-md-6">
    <div class="card" style="width: 18rem;">
 	   <div class="card-header">
 		   <h5 class="text-center"><strong>{{ $artist['name'] }}</strong></h5>
@@ -22,7 +22,7 @@
 			   <a href="/artistas/{{ $artist['slug'] }}" class="btn btn-primary border border-primary rounded mr-1"><i class="fas fa-eye"></i></a>
 			   <a href="/artistas/{{ $artist['id'] }}/editar" class="btn btn-primary border border-primary rounded mx-1"><i class="fas fa-edit"></i></a>
 
-			   <form action="/artistas/{{ $artist['id'] }}" method="post">
+			   <form action="/artistas/{{ $artist['id'] }}" data-elemento="artistas" data-action="delete" data-elementoBorrar="{{ $artist['id'] }}" method="post">
 				   @csrf
 				   @method('delete')
 				   <button type="submit" class="btn btn-danger ml-lg-5"><i class="fas fa-trash-alt"></i></a>
@@ -41,10 +41,12 @@
    {{ $artists->links() }}
 </div>
 
+@include('partials.deleteModal')
 
 @endsection
 @push('scripts')
 	<script src="{{ mix('/js/eventos/eventos.js') }}" defer ></script>
+	<script src="{{ mix('/js/index/deleteConfirmation.js') }}" defer ></script>
 @endpush
 @push('estilos')
 	<link href="{{ mix('/css/eventos/eventos.css') }}" rel="stylesheet">

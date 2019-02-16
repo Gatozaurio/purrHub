@@ -11,7 +11,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Factory(App\Concert::class, 25)->create();
-		Factory(App\Artist::class, 15)->create();
+        $concerts = Factory(App\Concert::class, 25)->create();
+		$artists = Factory(App\Artist::class, 15)->create();
+
+		$concerts->each(function(App\Concert $concert) use
+		($artists){
+			$concert->artists()->attach(
+				$artists->random(random_int(1,15))
+			);
+		});
     }
 }

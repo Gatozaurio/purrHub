@@ -116,4 +116,18 @@ class ArtistsController extends Controller
 	        return redirect('/artistas');
 	    }
 
+		/**
+	     * Remove the specified resource from storage through ajax.
+	     *
+	     * @param  artist id
+	     * @return \Illuminate\Http\Response
+	     */
+		public function deleteAjax($id)
+		{
+			$artist = Artist::where('id', $id)->firstOrFail();
+
+			$artist->delete();
+
+			return "Elemento borrado correctamente";
+		}
 }

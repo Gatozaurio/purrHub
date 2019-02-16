@@ -6,7 +6,7 @@
 <div class="mt-4">
 	<h2><strong>{{ $artist['name'] }}</strong></h2>
 </div>
-
+<img class="img-responsive rounded" src="{{ $artist['image'] }}" alt="Imágen del artista">
 <div class="mt-5">
 	<button id="botonToggle" class="btn btn-primary collapsed" type="button" data-toggle="collapse" data-target="#informacion" aria-expanded="false" aria-controls="informacion">Más info</button>
 	<hr>

@@ -115,4 +115,19 @@ class ConcertsController extends Controller
 
         return redirect('/conciertos');
     }
+
+	/**
+     * Remove the specified resource from storage through ajax.
+     *
+     * @param  concert id
+     * @return \Illuminate\Http\Response
+     */
+	public function deleteAjax($id)
+	{
+		$concert = Concert::where('id', $id)->firstOrFail();
+
+		$concert->delete();
+
+		return "Elemento borrado correctamente";
+	}
 }

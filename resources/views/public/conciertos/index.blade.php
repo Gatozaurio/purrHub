@@ -4,7 +4,6 @@
 
 @section('content')
 
-
 <h1>Lista de conciertos</h1>
 <div id="crearEventos"  class="dropdown">
    <button id="botonCrearEventos" class="btn btn-success mb-10 dropdown-toggle"
@@ -22,7 +21,7 @@
 
 <div class="row">
  @forelse ($concerts as $concert)
-   <div class=" mr-lg-4 mr-md-2 mt-4 col-12 col-lg-3 col-md-6">
+   <div data-idElemento="{{ $concert['id'] }}" class=" mr-lg-4 mr-md-2 mt-4 col-12 col-lg-3 col-md-6">
    <div class="card" style="width: 18rem;">
 	   <div class="card-header">
 		   <h5 class="text-center"><strong>{{ $concert['name'] }}</strong></h5>
@@ -35,7 +34,7 @@
 			   <a href="/conciertos/{{ $concert['slug'] }}" class="btn btn-primary border border-primary rounded mr-1"><i class="fas fa-eye"></i></a>
 			   <a href="/conciertos/{{ $concert['id'] }}/editar" class="btn btn-primary border border-primary rounded mx-1"><i class="fas fa-edit"></i></a>
 
-			   <form action="/conciertos/{{ $concert['id'] }}" method="post">
+			   <form action="/conciertos/{{ $concert['id'] }}"  data-elemento="conciertos" data-action="delete" data-elementoBorrar="{{ $concert['id'] }}" method="post">
 				   @csrf
 				   @method('delete')
 				   <button type="submit" class="btn btn-danger ml-lg-5"><i class="fas fa-trash-alt"></i></a>
@@ -54,10 +53,13 @@
    {{ $concerts->links() }}
 </div>
 
+@include('partials.deleteModal')
 
 @endsection
+
 @push('scripts')
 	<script src="{{ mix('/js/eventos/eventos.js') }}" defer ></script>
+	<script src="{{ mix('/js/index/deleteConfirmation.js') }}" defer ></script>
 @endpush
 @push('estilos')
 	<link href="{{ mix('/css/eventos/eventos.css') }}" rel="stylesheet">

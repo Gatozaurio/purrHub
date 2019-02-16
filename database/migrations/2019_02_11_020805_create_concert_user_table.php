@@ -23,8 +23,8 @@ class CreateConcertUserTable extends Migration
 
 			$table->primary(['concert_id', 'user_id']);
 
-			$table->foreign('concert_id')->references('id')->on('concerts');
-			$table->foreign('user_id')->references('id')->on('users');
+			$table->foreign('concert_id')->references('id')->on('concerts')->onDelete('cascade');
+			$table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 		});
     }
 

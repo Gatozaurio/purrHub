@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Concert;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -9,7 +10,8 @@ class PagesController extends Controller
     //
     public function index()
     {
-      return view('public.pages.index');
+		$concerts = Concert::take(5)->get();
+      	return view('public.pages.index', ['concerts' => $concerts]);
     }
 
     public function calendario()

@@ -6,5 +6,6 @@
     "/css/eventos/eventos.css": "/css/eventos/eventos.css",
     "/js/concierto/concierto.js": "/js/concierto/concierto.js",
     "/js/eventos/eventos.js": "/js/eventos/eventos.js",
-    "/js/formularios/formularios.js": "/js/formularios/formularios.js"
+    "/js/formularios/formularios.js": "/js/formularios/formularios.js",
+    "/js/index/deleteConfirmation.js": "/js/index/deleteConfirmation.js"
 }

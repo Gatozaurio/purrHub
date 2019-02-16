@@ -25,6 +25,7 @@ Route::get('/conciertos/{concert}/editar', 'ConcertsController@edit');
 Route::patch('/conciertos/{concert}', 'ConcertsController@update');
 Route::delete('/conciertos/{concert}', 'ConcertsController@destroy');
 Route::get('/conciertos/{concert}', 'ConcertsController@show');
+Route::delete('conciertos/borrarAjax/{concert}', 'ConcertsController@deleteAjax');
 
 // Rutas para la entidad Artists
 Route::get('/artistas', 'ArtistsController@index');
@@ -34,6 +35,7 @@ Route::get('/artistas/{artist}/editar', 'ArtistsController@edit');
 Route::patch('/artistas/{artist}', 'ArtistsController@update');
 Route::delete('/artistas/{artist}', 'ArtistsController@destroy');
 Route::get('/artistas/{artist}', 'ArtistsController@show');
+Route::delete('artistas/borrarAjax/{artist}', 'ArtistsController@deleteAjax');
 
 // Route::resource('/concerts', 'ConcertsController');
 
