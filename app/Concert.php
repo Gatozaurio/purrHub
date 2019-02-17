@@ -10,11 +10,13 @@ class Concert extends Model
     //protected $fillable = ['name', 'slug', 'artists', 'price', 'city', 'location', 'address', 'date', 'schedule', 'ticket', 'info']; // especifica qué campos no están protegidos y permite crear conciertos con arrays asociativos
     protected $guarded = ['id', 'created_at', 'updated_at']; // Se especifican los campos protegidos
 
-	public function artists(){
+	public function artists()
+	{
 		return $this->belongsToMany(Artist::class);
 	}
 
-	public function users(){
+	public function users()
+	{
 		return $this->belongsToMany(User::class);
 	}
 }

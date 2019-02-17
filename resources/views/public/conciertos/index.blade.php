@@ -27,7 +27,7 @@
 		   <h5 class="text-center"><strong>{{ $concert['name'] }}</strong></h5>
 	   </div>
 	   <div class="card-body">
-		   <img class="card-img-top" class="img-responsive img-rounded" src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.pexels.com%2Fphotos%2F1047442%2Fpexels-photo-1047442.jpeg%3Fauto%3Dcompress%26cs%3Dtinysrgb%26h%3D350&f=1" alt="Concierto">
+		   <img class="card-img-top" class="img-responsive img-rounded" src="{{ $concert->artists->image}}" alt="Concierto">
 		   <h6 class="card-subtitle my-2 text-muted">{{ $concert['price'] }} €</h6>
 		   <h5 class="card-text">{{ $concert['location'] }}</h5>
 		   <div class='btn-group'>

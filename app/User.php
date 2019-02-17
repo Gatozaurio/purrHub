@@ -28,7 +28,8 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-	public function concerts(){
+	public function concerts()
+	{
 		return $this->belongsToMany(Concert::class);
 	}
 }

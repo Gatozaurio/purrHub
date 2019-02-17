@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Concert;
+use App\Artist;
 use Illuminate\Http\Request;
 use App\Http\Requests\ConcertRequest;
 
