@@ -26,8 +26,9 @@
 	   <div class="card-header">
 		   <h5 class="text-center"><strong>{{ $concert['name'] }}</strong></h5>
 	   </div>
+
 	   <div class="card-body">
-		   <img class="card-img-top" class="img-responsive img-rounded" src="{{ $concert->artists->image}}" alt="Concierto">
+		   <img class="card-img-top" class="img-responsive img-rounded" src="{{ $concert->artists[0]->image }}" alt="Concierto">
 		   <h6 class="card-subtitle my-2 text-muted">{{ $concert['price'] }} €</h6>
 		   <h5 class="card-text">{{ $concert['location'] }}</h5>
 		   <div class='btn-group'>

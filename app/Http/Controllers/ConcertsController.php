@@ -50,7 +50,6 @@ class ConcertsController extends Controller
 	        'ticket' => request('ticket'),
 	        'info' => request('info')
 		]);
-
         return redirect('/conciertos');
     }
 
