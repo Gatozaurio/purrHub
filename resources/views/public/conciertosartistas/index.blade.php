@@ -4,7 +4,7 @@
 
 @section('content')
 
-<h1>Lista de conciertos</h1>
+<h1>Conciertos de {{ $artist->name }}</h1>
 <div id="crearEventos"  class="dropdown">
    <button id="botonCrearEventos" class="btn btn-success mb-10 dropdown-toggle"
 		   type="button"
@@ -45,10 +45,9 @@
    </div>
 </div>
  @empty
-   <p>No hay conciertos</p>
+   <p>{{ $artist->name }} no tiene conciertos actualmente.</p>
  @endforelse
 </div>
-
 
 <div class="d-flex justify-content-center mt-4">
    {{ $concerts->links() }}

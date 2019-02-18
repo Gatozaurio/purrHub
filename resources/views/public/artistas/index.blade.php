@@ -6,7 +6,7 @@
 
 
 <h1>Lista de artistas</h1>
-   <a href="/artistas/crear" class="btn btn-success mb-10">Nuevo artista</a>
+   <a href="/artistas/crear" class="btn btn-success mb-10"><i class="fas fa-plus"></i> Nuevo artista</a>
 
 <div class="row">
  @forelse ($artists as $artist)
@@ -17,7 +17,8 @@
 	   </div>
 	   <div class="card-body">
 		   <img class="card-img-top" class="img-responsive img-rounded" src="{{ $artist['image'] }}" alt="Imágen del artista">
-		   <h6 class="card-subtitle my-2 text-muted">Conciertos</h6>
+		   <h5 class="card-subtitle my-2 text-muted"><a href="/artistas/{{ $artist['slug'] }}/conciertos"><span class="badge badge-primary">{{ $artist->concerts->count() }}</span> Conciertos</a><br></h5>
+
 		   <div class='btn-group'>
 			   <a href="/artistas/{{ $artist['slug'] }}" class="btn btn-primary border border-primary rounded mr-1"><i class="fas fa-eye"></i></a>
 			   <a href="/artistas/{{ $artist['id'] }}/editar" class="btn btn-primary border border-primary rounded mx-1"><i class="fas fa-edit"></i></a>

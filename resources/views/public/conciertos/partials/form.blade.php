@@ -8,6 +8,26 @@
 @endif
 </div>
 
+<div class="form-group">
+    <label for="artists">Artistas</label>
+    <select class="form-control {{ $errors->has('artists')?"is-invalid":"" }}" id="artists" name="artists[]" multiple>
+        @foreach($artists as $artist)
+            <option value="{{ $artist->id }}"
+                @if( !$errors->isEmpty() )
+                    {{ in_array($artist->id, old('artist') ?? [] )?"selected":"" }}
+                @elseif( isset($concierto) )
+                    {{ $concierto->artists->contains($artist->id)?"selected":"" }}
+                @endif
+            >{{ $artist->name }}</option>
+        @endforeach
+    </select>
+    @if( $errors->has('artists') )
+    <div class="invalid-feedback">
+        {{ $errors->first('artists') }}
+    </div>
+    @endif
+</div>
+
 
 <div class="form-group">
  <label for="price">Precio</label>

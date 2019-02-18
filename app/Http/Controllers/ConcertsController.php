@@ -27,7 +27,9 @@ class ConcertsController extends Controller
      */
     public function create()
     {
-        return view('public.conciertos.create');
+		$artistas = Artist::all();
+
+        return view('public.conciertos.create', ['artists' => $artistas]);
     }
 
     /**
@@ -38,7 +40,7 @@ class ConcertsController extends Controller
      */
     public function store(ConcertRequest $request)
     {
-        Concert::create([
+        $concert = Concert::create([
 			'name' => request('name'),
 			'slug' => str_slug(request('name'), "-"),
 	        'price' => request('price'),
@@ -50,6 +52,9 @@ class ConcertsController extends Controller
 	        'ticket' => request('ticket'),
 	        'info' => request('info')
 		]);
+
+		$concert->artists()->sync( request('artists') );
+
         return redirect('/conciertos');
     }
 

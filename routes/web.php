@@ -11,8 +11,8 @@
 |
 */
 
+// Rutas para las páginas sueltas
 Route::get('/', 'PagesController@index');
-// Route::get('/artistas', 'PagesController@artistas');
 Route::get('/calendario', 'PagesController@calendario');
 Route::get('/acercade', 'PagesController@acercade');
 Route::get('/contacto', 'PagesController@contacto');
@@ -37,7 +37,8 @@ Route::delete('/artistas/{artist}', 'ArtistsController@destroy');
 Route::get('/artistas/{artist}', 'ArtistsController@show');
 Route::delete('artistas/borrarAjax/{artist}', 'ArtistsController@deleteAjax');
 
-// Route::resource('/concerts', 'ConcertsController');
+// Ruta para mostrar los conciertos de un artista
+Route::get('/artistas/{artist}/conciertos', 'ArtistConcertsController@index');
 
 Auth::routes();
 
