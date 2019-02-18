@@ -3,8 +3,14 @@
 @section('title', 'Concierto')
 
 @section('content')
-<div class="mt-4">
-	<h2><strong>{{ $concierto['name'] }}</strong></h2><a href="{{ $concierto['ticket'] }}" class="btn btn-success">Comprar entrada</a>
+<div class="justify-content-between">
+	<span  class="mt-2">
+		<h2><strong>{{ $concierto['name'] }}</strong></h2>
+		<a href="{{ $concierto['ticket'] }}" class="btn btn-success">Comprar entrada</a>
+	</span >
+	<span class="col-2">
+		{{ $concierto->users->count() }} Asistentes
+	</span>
 </div>
 
 <div class="mt-3">
