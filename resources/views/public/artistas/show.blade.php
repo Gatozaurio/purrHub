@@ -5,6 +5,7 @@
 @section('content')
 <div class="mt-4">
 	<h2><strong>{{ $artist['name'] }}</strong></h2>
+	<h5 class="card-subtitle my-2 text-muted"><a href="/artistas/{{ $artist['slug'] }}/conciertos"><span class="badge badge-primary">{{ $artist->concerts->count() }}</span> {{ str_plural("Concierto", $artist->concerts->count())}}</a><br></h5>
 </div>
 <img class="img-responsive rounded" src="{{ $artist['image'] }}" alt="Imágen del artista">
 <div class="mt-5">
