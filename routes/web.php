@@ -27,6 +27,7 @@ Route::delete('/conciertos/{concert}', 'ConcertsController@destroy');
 Route::get('/conciertos/{concert}', 'ConcertsController@show');
 Route::delete('/conciertos/borrarAjax/{concert}', 'ConcertsController@deleteAjax');
 Route::post('conciertos/buscarAjax', 'ConcertsController@searchAjax');
+Route::get('/conciertos/paginacion/ajax/{contador}', 'ConcertsController@paginateAjax');
 
 
 // Rutas para la entidad Artists

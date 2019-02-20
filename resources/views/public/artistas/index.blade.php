@@ -52,6 +52,7 @@
 @push('scripts')
 	<script src="{{ mix('/js/eventos/eventos.js') }}" defer ></script>
 	<script src="{{ mix('/js/general/deleteConfirmation.js') }}" defer ></script>
+	<script src="{{ mix('/js/general/ajaxPagination.js') }}" defer ></script>
 @endpush
 @push('estilos')
 	<link href="{{ mix('/css/eventos/eventos.css') }}" rel="stylesheet">

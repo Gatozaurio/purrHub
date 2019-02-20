@@ -7,6 +7,7 @@
     "/js/concierto/concierto.js": "/js/concierto/concierto.js",
     "/js/eventos/eventos.js": "/js/eventos/eventos.js",
     "/js/formularios/formularios.js": "/js/formularios/formularios.js",
+    "/js/general/ajaxPagination.js": "/js/general/ajaxPagination.js",
     "/js/general/ajaxSearch.js": "/js/general/ajaxSearch.js",
     "/js/general/deleteConfirmation.js": "/js/general/deleteConfirmation.js"
 }
