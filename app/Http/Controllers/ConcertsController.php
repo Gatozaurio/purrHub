@@ -9,6 +9,13 @@ use App\Http\Requests\ConcertRequest;
 
 class ConcertsController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth', [
+            'only' => ['create' , 'store', 'edit', 'update', 'destroy', 'deleteAjax']
+        ]);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -79,8 +86,10 @@ class ConcertsController extends Controller
      */
     public function edit(Concert $concert)
     {
+        $artistas = Artist::all();
+
         //$concert = \App\Concert::findOrFail($id);
-        return view('public.conciertos.edit', ['concert' => $concert]);
+        return view('public.conciertos.edit', ['concert' => $concert], ['artists' => $artistas]);
     }
 
     /**
@@ -134,5 +143,12 @@ class ConcertsController extends Controller
 		$concert->delete();
 
 		return "Elemento borrado correctamente";
+    }
+
+    public function searchAjax()
+	{
+        $search = request('search');
+        $conciertos = Concert::where('name', 'like', '%'.$search.'%' )->get();
+        return view('public.conciertos.index', ['concerts' => $conciertos]);
 	}
 }

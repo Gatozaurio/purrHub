@@ -17,4 +17,14 @@ class ArtistConcertsController extends Controller
             'concerts' => $concerts
         ]);
 	}
+
+	public function deleteAjax($id)
+	{
+		$concert = Concert::where('id', $id)->firstOrFail();
+
+		$concert->delete();
+
+		return "Elemento borrado correctamente";
+    }
+
 }

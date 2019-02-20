@@ -29,7 +29,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+        <nav class="navbar navbar-expand-lg navbar-light navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <i class="fas fa-cat"></i> PurrHub
@@ -57,7 +57,17 @@
 						  <a class="nav-link" href="/acercade">Acerca de</a>
 						</li>
                     </ul>
-
+                    <!-- Barra de búsqueda -->
+                    <ul class="navbar-nav col-md-4 col-xl-5 ml-auto">
+                        <form class="w-100" action="conciertos/buscarAjax" data-action="search">
+                            <div class="input-group input-group-sm mt-2">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-outline-secondary" type="button"><i class="fas fa-search"></i></button>
+                                </div>
+                                <input type="text" class="form-control mr-1 col-12" placeholder="" aria-label="" aria-describedby="basic-addon1">
+                            </div>
+                        </form> 
+                    </ul>
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
