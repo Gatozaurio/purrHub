@@ -10,6 +10,7 @@
 
 <div class="form-group">
     <label for="artists">Artistas</label>
+    <a href="/artistas/crear" class="btn btn-primary btn-sm rounded mb-2 ml-1" target="_blank">Nuevo artista</a>
     <select class="form-control {{ $errors->has('artists')?"is-invalid":"" }}" id="artists" name="artists[]" multiple>
         @foreach($artists as $artist)
             <option value="{{ $artist->id }}"
