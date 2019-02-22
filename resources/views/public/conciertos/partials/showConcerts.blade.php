@@ -15,12 +15,12 @@
 					title="Ver concierto" data-placement="bottom" data-template="@include('partials.tooltipTemplate')"><i class="fas fa-eye"></i></a>
 					@auth
 						<!-- Botón editar -->
-						<a href="/conciertos/{{ $concert['id'] }}/editar" class="btn btn-primary border border-primary rounded mx-1 col-4"><i class="fas fa-edit"></i></a>
+						<a href="/conciertos/{{ $concert['id'] }}/editar" class="btn btn-primary border border-primary rounded mx-1 col-4" data-toggle="tooltip" title="Editar concierto" data-placement="bottom" data-template="@include('partials.tooltipTemplate')"><i class="fas fa-edit"></i></a>
 						<!-- Botón borrar -->
 						<form action="/conciertos/{{ $concert['id'] }}"  data-elemento="conciertos" data-action="delete" data-elementoBorrar="{{ $concert['id'] }}" method="post">
 							@csrf
 							@method('delete')
-							<button type="submit" class="btn btn-danger ml-lg-5"><i class="fas fa-trash-alt"></i></a>
+							<button type="submit" class="btn btn-danger ml-lg-5" data-toggle="tooltip" title="Borrar concierto" data-placement="bottom" data-template="@include('partials.tooltipTemplate')"><i class="fas fa-trash-alt"></i></a>
 						</form>
 					@endauth
 				</div>
