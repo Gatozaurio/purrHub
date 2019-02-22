@@ -81,46 +81,32 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 7);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/general/ajaxPagination.js":
-/*!************************************************!*\
-  !*** ./resources/js/general/ajaxPagination.js ***!
-  \************************************************/
+/***/ "./resources/js/general/tooltip.js":
+/*!*****************************************!*\
+  !*** ./resources/js/general/tooltip.js ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
 document.addEventListener('DOMContentLoaded', function () {
-  var contadorConciertos = 12;
-  $(window).on("scroll", function () {
-    var scrollHeight = $(document).height();
-    var scrollPosition = $(window).height() + $(window).scrollTop();
-
-    if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
-      axios.get('conciertos/paginacion/ajax/' + contadorConciertos).then(function (respuesta) {
-        if (respuesta.data === "") {//$('#modalSinElementos')
-        } else {
-          $("#conciertosMostrados").append(respuesta.data);
-          contadorConciertos += 12;
-        }
-      });
-    }
-  });
+  $('[data-toggle="tooltip"]').tooltip();
 });
 
 /***/ }),
 
-/***/ 6:
-/*!******************************************************!*\
-  !*** multi ./resources/js/general/ajaxPagination.js ***!
-  \******************************************************/
+/***/ 7:
+/*!***********************************************!*\
+  !*** multi ./resources/js/general/tooltip.js ***!
+  \***********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/gato/Sites/purrhub/resources/js/general/ajaxPagination.js */"./resources/js/general/ajaxPagination.js");
+module.exports = __webpack_require__(/*! /home/gato/Sites/purrhub/resources/js/general/tooltip.js */"./resources/js/general/tooltip.js");
 
 
 /***/ })

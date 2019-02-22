@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-// Toggle
+// Toggle para creación de eventos
 $(function () {
   $('#crearEventos').on('show.bs.dropdown', function () {
     $('#botonCrearEventos').removeClass("btn-success");

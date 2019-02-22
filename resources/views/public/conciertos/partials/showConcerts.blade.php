@@ -10,10 +10,13 @@
 				<h6 class="card-subtitle my-2 text-muted">{{ $concert['price'] }} €</h6>
 				<h5 class="card-text">{{ $concert['location'] }}</h5>
 				<div class='btn-group d-flex'>
-					<a href="/conciertos/{{ $concert['slug'] }}" class="btn btn-primary border border-primary rounded ml-auto mr-1 col-4"><i class="fas fa-eye"></i></a>
+					<!-- Botón ver -->
+					<a href="/conciertos/{{ $concert['slug'] }}" class="btn btn-primary border border-primary rounded ml-auto mr-1 col-4" data-toggle="tooltip"
+					title="Ver concierto" data-placement="bottom" data-template="@include('partials.tooltipTemplate')"><i class="fas fa-eye"></i></a>
 					@auth
+						<!-- Botón editar -->
 						<a href="/conciertos/{{ $concert['id'] }}/editar" class="btn btn-primary border border-primary rounded mx-1 col-4"><i class="fas fa-edit"></i></a>
-
+						<!-- Botón borrar -->
 						<form action="/conciertos/{{ $concert['id'] }}"  data-elemento="conciertos" data-action="delete" data-elementoBorrar="{{ $concert['id'] }}" method="post">
 							@csrf
 							@method('delete')

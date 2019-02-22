@@ -9,5 +9,6 @@
     "/js/formularios/formularios.js": "/js/formularios/formularios.js",
     "/js/general/ajaxPagination.js": "/js/general/ajaxPagination.js",
     "/js/general/ajaxSearch.js": "/js/general/ajaxSearch.js",
-    "/js/general/deleteConfirmation.js": "/js/general/deleteConfirmation.js"
+    "/js/general/deleteConfirmation.js": "/js/general/deleteConfirmation.js",
+    "/js/general/tooltip.js": "/js/general/tooltip.js"
 }
