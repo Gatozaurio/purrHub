@@ -2005,7 +2005,7 @@ function crearElemento(event) {
     id_concierto: $('#id_concierto').val(),
     message: $('#message').val()
   }).then(function (respond) {
-    $('#comentarios').append(respond.data);
+    $('#comentarios').append(respond.data).last();
     $('#message').val('');
   });
 }

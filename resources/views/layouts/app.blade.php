@@ -109,6 +109,7 @@
         </main>
 	</div>
     </div>
-	@stack('scripts')
+    @stack('scripts')
+    <script src="{{ mix('/js/general/ajaxSearch.js') }}" defer ></script>
 </body>
 </html>

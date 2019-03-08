@@ -1993,18 +1993,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 
-$(function () {
+document.addEventListener('DOMContentLoaded', function () {
   $("form[data-action='search']").on('submit', function (event) {
-    buscarElemento(event);
+    buscarElementos(event);
   });
 });
 
-function buscarElemento(event) {
+function buscarElementos(event) {
   event.preventDefault();
   axios.post('conciertos/buscarAjax', {
     search: $("#search").val()
   }).then(function (respuesta) {
-    $("#librosMostrar").html(respuesta.data);
+    $("#conciertosMostrados").empty();
+    $("#conciertosMostrados").append(respuesta.data);
   });
 }
 

@@ -11,6 +11,7 @@ function buscarElementos(event){
     axios.post('conciertos/buscarAjax',{
         search: $("#search").val()
     }).then(function(respuesta){
-        $("#librosMostrar").html(respuesta.data);
+        $("#conciertosMostrados").empty();
+        $("#conciertosMostrados").append(respuesta.data);
     });
 }

@@ -37,15 +37,17 @@
 <div class="mt-5">
 		<h3><strong>Comentarios</strong></h3>
 		<hr>
+
+		<div id="comentarios">
 		@forelse($concierto->comments as $comentario)
-			<div class="comentarios">
 				<ul class="list-group">
 					@include('public.comentarios.index')
 				</ul>
-			</div>
+			
 			@empty
 			<p>¡Se el primero en comentar!</p>
 		@endforelse
+		</div>
 
 		<form action="/conciertos" method="post" data-action="create">
 			@csrf

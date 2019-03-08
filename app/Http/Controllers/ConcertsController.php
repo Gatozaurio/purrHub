@@ -149,7 +149,7 @@ class ConcertsController extends Controller
 	{
         $search = request('search');
         $conciertos = Concert::where('name', 'like', '%'.$search.'%' )->get();
-        return view('public.conciertos.index', ['concerts' => $conciertos]);
+        return view('public.conciertos.partials.showConcerts', ['concerts' => $conciertos]);
     }
     
     public function paginateAjax($contador)
