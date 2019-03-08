@@ -31,5 +31,9 @@ class User extends Authenticatable
 	public function concerts()
 	{
 		return $this->belongsToMany(Concert::class);
+    }
+    public function comments()
+	{
+		return $this->hasMany(Comment::class);
 	}
 }

@@ -33,9 +33,40 @@
 	<hr>
 	<h5 id="informacion" class="collapse">{{ $concierto['info'] }}</h5>
 </div>
+
+<div class="mt-5">
+	<div class="comentarios">
+		<h3><strong>Comentarios</strong></h3>
+		<hr>
+		@forelse($concierto->comments as $comment)
+			<ul class="list-group">
+				@include('public.comentarios.index')
+			</ul>
+			@empty
+			<p>¡Se el primero en comentar!</p>
+		@endforelse
+
+		<form action="/conciertos" method="post">
+			@csrf
+			<div class="form-group">
+			<input type="hidden" name="id_concierto" id="id_concierto" value="{{$concierto->id}}">
+				<input type="text" class="form-control {{ $errors->has('message')?"is-invalid":""}}" id="message" name="message" placeholder="Escribe tu comentario">
+				@if ( $errors->has('message') )
+					<div class="invalid-feedback">
+						{{ $errors->first('message') }}
+					</div>
+				@endif
+			</div>
+
+			<button type="submit" class="btn btn-primary">Enviar</button>
+		</form>
+	</div>
+</div>
+
 @endsection
 @push('scripts')
 	<script src="{{ mix('/js/concierto/concierto.js') }}" defer ></script>
+	<script src="{{ mix('/js/comentarios/ajaxCreation.js') }}" defer ></script>
 @endpush
 @push('estilos')
 	<link href="{{ mix('/css/concierto/concierto.css') }}" rel="stylesheet">
