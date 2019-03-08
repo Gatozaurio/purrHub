@@ -62,7 +62,7 @@
                         <form class="w-100" action="conciertos/buscarAjax" data-action="search">
                             <div class="input-group input-group-sm mt-2">
                                 <div class="input-group-prepend">
-                                    <button class="btn btn-outline-secondary" type="button"><i class="fas fa-search"></i></button>
+                                    <button class="btn btn-outline-secondary" type="submit"><i class="fas fa-search"></i></button>
                                 </div>
                                 <input type="text" class="form-control mr-1 col-12" placeholder="" aria-label="" aria-describedby="basic-addon1">
                             </div>

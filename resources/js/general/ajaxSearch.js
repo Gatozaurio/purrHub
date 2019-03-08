@@ -1,12 +1,12 @@
 import Axios from "axios";
 
-$(function(){
+document.addEventListener('DOMContentLoaded',function(){
     $("form[data-action='search']").on('submit',function(event) {
-		buscarElemento(event);
+		buscarElementos(event);
 	});
 });
 
-function buscarElemento(event){
+function buscarElementos(event){
     event.preventDefault();
     axios.post('conciertos/buscarAjax',{
         search: $("#search").val()

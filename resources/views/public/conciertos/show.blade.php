@@ -35,18 +35,19 @@
 </div>
 
 <div class="mt-5">
-	<div class="comentarios">
 		<h3><strong>Comentarios</strong></h3>
 		<hr>
-		@forelse($concierto->comments as $comment)
-			<ul class="list-group">
-				@include('public.comentarios.index')
-			</ul>
+		@forelse($concierto->comments as $comentario)
+			<div class="comentarios">
+				<ul class="list-group">
+					@include('public.comentarios.index')
+				</ul>
+			</div>
 			@empty
 			<p>¡Se el primero en comentar!</p>
 		@endforelse
 
-		<form action="/conciertos" method="post">
+		<form action="/conciertos" method="post" data-action="create">
 			@csrf
 			<div class="form-group">
 			<input type="hidden" name="id_concierto" id="id_concierto" value="{{$concierto->id}}">
@@ -60,7 +61,6 @@
 
 			<button type="submit" class="btn btn-primary">Enviar</button>
 		</form>
-	</div>
 </div>
 
 @endsection

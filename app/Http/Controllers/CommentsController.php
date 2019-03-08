@@ -12,11 +12,11 @@ class CommentsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function store()
+    public function store(Request $request)
     {
         $comentario = Comment::create([
-            'id_usuario'   =>  $request->user()->id,
-            'id_concierto'   =>  request('id_concierto'),
+            'user_id'   =>  $request->user()->id,
+            'concert_id'   =>  request('id_concierto'),
             'message'   =>  request('message')
         ]);
         return view('public.comentarios.index', ['comentario' => $comentario]);
