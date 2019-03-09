@@ -39,21 +39,20 @@
 		<hr>
 
 		<div id="comentarios">
-		@forelse($concierto->comments as $comentario)
+			@forelse($concierto->comments as $comentario)
 				<ul class="list-group">
 					@include('public.comentarios.index')
 				</ul>
-			
 			@empty
-			<p>¡Se el primero en comentar!</p>
-		@endforelse
+				<p>¡Se el primero en comentar!</p>
+			@endforelse
 		</div>
-
+		@auth
 		<form action="/conciertos" method="post" data-action="create">
 			@csrf
 			<div class="form-group">
 			<input type="hidden" name="id_concierto" id="id_concierto" value="{{$concierto->id}}">
-				<input type="text" class="form-control {{ $errors->has('message')?"is-invalid":""}}" id="message" name="message" placeholder="Escribe tu comentario">
+				<input type="text" class="form-control mt-3 {{ $errors->has('message')?"is-invalid":""}}" id="message" name="message" placeholder="Escribe tu comentario">
 				@if ( $errors->has('message') )
 					<div class="invalid-feedback">
 						{{ $errors->first('message') }}
@@ -63,6 +62,7 @@
 
 			<button type="submit" class="btn btn-primary">Enviar</button>
 		</form>
+		@endauth
 </div>
 
 @endsection
