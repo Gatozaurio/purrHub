@@ -43,6 +43,7 @@ Route::delete('artistas/borrarAjax/{artist}', 'ArtistsController@deleteAjax');
 
 // Rutas para la entidad Comments
 Route::post('/comentarios', 'CommentsController@store');
+Route::get('/conciertos/{comment}/editar', 'CommentController@edit');
 
 // Ruta para mostrar los conciertos de un artista
 Route::get('/artistas/{artist}/conciertos', 'ArtistConcertsController@index');

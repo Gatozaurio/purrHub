@@ -14,9 +14,6 @@ document.addEventListener('DOMContentLoaded',function(){
                     contadorConciertos += 12;
                 }
                 $('#spinner').addClass("invisible");
-            }).catch(function(error){
-                alert("Ha ocurrido un error al realizar la petición");
-                console.log(error);
             });
         }
     });
