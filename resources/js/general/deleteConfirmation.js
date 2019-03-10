@@ -1,4 +1,4 @@
-$(function(){
+document.addEventListener('DOMContentLoaded', function(){
 	$("form[data-action='delete']").on('submit',function(event) {
 		borrarElemento(event);
 	});

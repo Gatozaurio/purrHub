@@ -3,11 +3,20 @@
 @section('title', 'Artista')
 
 @section('content')
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+    <li class="breadcrumb-item"><a href="/artistas">Artistas</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{{ $artist['name'] }}</li>
+  </ol>
+</nav>
+
 <div class="mt-4">
 	<h2><strong>{{ $artist['name'] }}</strong></h2>
 	<h5 class="card-subtitle my-2 text-muted"><a href="/artistas/{{ $artist['slug'] }}/conciertos"><span class="badge badge-primary">{{ $artist->concerts->count() }}</span> {{ str_plural("Concierto", $artist->concerts->count())}}</a><br></h5>
 </div>
-<img class="img-responsive rounded" src="{{ $artist['image'] }}" alt="Imágen del artista">
+<img class="img-responsive rounded img-thumbnail" src="{{ $artist['image'] }}" alt="Imágen del artista">
 <div class="mt-5">
 	<button id="botonToggle" class="btn btn-primary collapsed" type="button" data-toggle="collapse" data-target="#informacion" aria-expanded="false" aria-controls="informacion">Más info</button>
 	<hr>

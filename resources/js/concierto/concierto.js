@@ -1,6 +1,6 @@
 
 // Toggle
-$(function() {
+document.addEventListener('DOMContentLoaded', function(){
     $('#informacion').on('show.bs.collapse', function (e) {
         $('#botonToggle').addClass("togglePulsado");
     })

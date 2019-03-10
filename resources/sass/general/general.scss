@@ -1,0 +1,10 @@
+@import 'variables';
+
+body {
+    background: $secundario;
+}
+
+#navbar {
+    background: $principal;
+    color: $letrasNav;
+}

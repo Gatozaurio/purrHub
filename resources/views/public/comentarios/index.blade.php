@@ -1,11 +1,13 @@
-<li class="list-group-item">
+<li class="list-group-item md" data-elementoEditar="{{ $comentario['id'] }}">
     <h4>
-        {{ $comentario->user['name']}}
+        <span>{{ $comentario->user['name']}}</span>
     </h4>
-        <div class="row">
-        <p>{{ $comentario->message}}</p>
+    <span>{{ $comentario->message}}</span>
         <!-- Botón editar -->
-        <button type="button" id="editButton" class="btn btn-primary col-1 ml-auto mr-3" data-toggle="tooltip" title="Editar comentario" data-placement="bottom" data-template="@include('partials.tooltipTemplate')"><i class="fas fa-edit"></i>
-    </div>
+        <form action="/comentario/{{ $comentario->id }}/editar" data-action="edit"  method="post" >
+            @csrf
+            @method('put')
+            <button type="submit" class="btn btn-primary ml-auto btn-md mt-2 col-1"><i class="fas fa-edit" ></i></button>
+        </form>
 </li>
 

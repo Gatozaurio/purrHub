@@ -4,6 +4,12 @@
 
 @section('content')
 
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+  </ol>
+</nav>
+
 <h1>Bienvenido a PurrHub</h1>
 <div class="carousel slide w-100 m-auto" data-ride="carousel">
 	<div class="carousel-inner">
@@ -21,14 +27,6 @@
 			</div>
 		@endforeach
 	</div>
-	<!-- <a class="carousel-control-prev" role="button" data-slide="prev">
-		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-		<span class="sr-only">Anterior</span>
-	</a>
-	<a class="carousel-control-next" role="button" data-slide="next">
-		<span class="carousel-control-next-icon" aria-hidden="true"></span>
-		<span class="sr-only">Siguiente</span>
-	</a> -->
 </div>
 <h4 class="mt-4 mb-4">
 	Purrhub es una plataforma en desarrollo para los amantes de la música en directo.
@@ -42,8 +40,17 @@
 	Thinking longingly about tuna brine brown cats with pink ears yet slap owner's face at 5am until human fills food dish, for play riveting piece on synthesizer keyboard jumps off balcony gives owner dead mouse at present then poops in litter box snatches yarn and fights with dog cat chases laser then plays in grass finds tiny spot in cupboard and sleeps all day jumps in bathtub and meows when owner fills food dish the cat knocks over the food dish cat slides down the water slide and into pool and swims even though it does not like water.
 </p>
 
-
-
+<div class="jumbotron">
+  <h1 class="display-4">¡Hazte ya con tu entrada!</h1>
+  <p class="lead">Ya ha comenzado la gira del último disco de NARCO ¡Espichufrenia!</p>
+  <hr class="my-4">
+	<div class="embed-responsive embed-responsive-16by9">
+	<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/nnz4XDevCEM" allowfullscreen></iframe>
+	</div>
+  <p class="lead mt-3">
+    <a class="btn btn-primary btn-lg" href="http://losnarco.com/" role="button">Página oficial</a>
+  </p>
+</div>
 
 
 

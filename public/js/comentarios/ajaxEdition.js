@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 9);
+/******/ 	return __webpack_require__(__webpack_require__.s = 11);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1994,25 +1994,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 
 document.addEventListener('DOMContentLoaded', function () {
-  alert('carga el dom');
-  $("#editButton").click(function (event) {
-    alert('click');
+  $("form[data-action='edit']").on('submit', function (event) {
     editarElemento(event);
   });
 }); // "/comentarios/{{ $comentario['id'] }}/editar"
 
 function editarElemento(event) {
   event.preventDefault();
-  alert('hola');
   var formulario = $(event.target);
-  var idElemento = formulario.attr("data-elementoBorrar");
+  var idElemento = formulario.attr("data-elementoEditar");
   var datosFormulario = formulario.serialize();
   axios.put("editarConcierto/ajax/idDelConcierto", datosFormulario).then(function (respuesta) {});
 }
 
 /***/ }),
 
-/***/ 9:
+/***/ 11:
 /*!*******************************************************!*\
   !*** multi ./resources/js/comentarios/ajaxEdition.js ***!
   \*******************************************************/

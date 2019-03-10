@@ -4,6 +4,12 @@
 
 @section('content')
 
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+    <li class="breadcrumb-item"><a href="/artistas">Artistas</a></li>
+  </ol>
+</nav>
 
 <h1>Lista de artistas</h1>
 @auth

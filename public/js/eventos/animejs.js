@@ -81,58 +81,38 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/general/deleteConfirmation.js":
-/*!****************************************************!*\
-  !*** ./resources/js/general/deleteConfirmation.js ***!
-  \****************************************************/
+/***/ "./resources/js/eventos/animejs.js":
+/*!*****************************************!*\
+  !*** ./resources/js/eventos/animejs.js ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
 document.addEventListener('DOMContentLoaded', function () {
-  $("form[data-action='delete']").on('submit', function (event) {
-    borrarElemento(event);
+  anime({
+    targets: "#concertCard",
+    rotate: "-360deg",
+    duration: 8000,
+    loop: true,
+    easing: "linear"
   });
 });
 
-function borrarElemento(event) {
-  event.preventDefault();
-  mostrarModal('deleteConfirmation');
-  var formulario = $(event.target);
-  var idElemento = formulario.attr("data-elementoBorrar");
-  var botonAceptarModal = $("#botonAceptarModal");
-  var elemento = formulario.attr("data-elemento");
-  botonAceptarModal.click(function () {
-    axios.delete("".concat(elemento, "/borrarAjax/").concat(idElemento)).then(function (respuesta) {
-      cerrarModal('deleteConfirmation');
-      botonAceptarModal.off("click");
-      $("div[data-idElemento='".concat(idElemento, "']")).remove();
-    });
-  });
-}
-
-function mostrarModal(id) {
-  $("#".concat(id)).modal('show');
-}
-
-function cerrarModal(id) {
-  $("#".concat(id)).modal('hide');
-}
-
 /***/ }),
 
-/***/ 5:
-/*!**********************************************************!*\
-  !*** multi ./resources/js/general/deleteConfirmation.js ***!
-  \**********************************************************/
+/***/ 3:
+/*!***********************************************!*\
+  !*** multi ./resources/js/eventos/animejs.js ***!
+  \***********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/gato/Sites/purrHub/resources/js/general/deleteConfirmation.js */"./resources/js/general/deleteConfirmation.js");
+module.exports = __webpack_require__(/*! /home/gato/Sites/purrHub/resources/js/eventos/animejs.js */"./resources/js/eventos/animejs.js");
 
 
 /***/ })

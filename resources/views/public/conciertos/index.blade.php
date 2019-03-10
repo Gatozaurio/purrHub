@@ -4,6 +4,13 @@
 
 @section('content')
 
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+    <li class="breadcrumb-item"><a href="/conciertos">Conciertos</a></li>
+  </ol>
+</nav>
+
 <h1>Lista de conciertos</h1>
 @auth
 	<div id="crearEventos"  class="dropdown">
@@ -39,7 +46,9 @@
 @endsection
 
 @push('scripts')
+	<script src="{{ mix('/js/general/anime.min.js') }}" defer ></script>
 	<script src="{{ mix('/js/eventos/eventos.js') }}" defer ></script>
+	<script src="{{ mix('/js/eventos/animejs.js') }}" defer ></script>
 	<script src="{{ mix('/js/general/deleteConfirmation.js') }}" defer ></script>
 	<script src="{{ mix('/js/general/ajaxPagination.js') }}" defer ></script>
 	<script src="{{ mix('/js/general/tooltip.js') }}" defer></script>

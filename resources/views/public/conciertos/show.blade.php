@@ -3,6 +3,15 @@
 @section('title', 'Concierto')
 
 @section('content')
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+    <li class="breadcrumb-item"><a href="/conciertos">Conciertos</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{{ $concierto['name'] }}</li>
+  </ol>
+</nav>
+
 <div class="justify-content-between">
 	<span  class="mt-2">
 		<h2><strong>{{ $concierto['name'] }}</strong></h2>
@@ -55,7 +64,7 @@
 				<input type="text" class="form-control mt-3 {{ $errors->has('message')?"is-invalid":""}}" id="message" name="message" placeholder="Escribe tu comentario">
 				@if ( $errors->has('message') )
 					<div class="invalid-feedback">
-						{{ $errors->first('message') }}
+						{{ $errors->all('message') }}
 					</div>
 				@endif
 			</div>

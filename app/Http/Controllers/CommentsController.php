@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Comment;
+use Illuminate\Http\Request;
+use App\Http\Requests\CommentRequest;
 
 class CommentsController extends Controller
 {

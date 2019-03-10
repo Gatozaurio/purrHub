@@ -1,83 +1,112 @@
-<div class="form-group">
- <label for="name">Nombre</label>
- <input type="text" class="form-control {{ $errors->has('name')?"is-invalid":""}}" id="name" name="name" placeholder="Nombre para el evento" value="{{ isset($concert)?$concert->name : old('name') }}">
- @if ( $errors->has('name') )
- <div class="invalid-feedback">
-  {{ $errors->first('name') }}
- </div>
-@endif
-</div>
+<div class="row">
+    <div class="col">
+        <div class="form-group">
+        <label for="name">Nombre</label>
+        <input type="text" class="form-control {{ $errors->has('name')?"is-invalid":""}}" id="name" name="name" placeholder="Nombre para el evento" value="{{ isset($concert)?$concert->name : old('name') }}">
+        @if ( $errors->has('name') )
+        <div class="invalid-feedback">
+        {{ $errors->first('name') }}
+        </div>
+        @endif
+        </div>
 
-<div class="form-group">
-    <label for="artists">Artistas</label>
-    <a href="/artistas/crear" class="btn btn-primary btn-sm rounded mb-2 ml-1" target="_blank">Nuevo artista</a>
-    <select class="form-control {{ $errors->has('artists')?"is-invalid":"" }}" id="artists" name="artists[]" multiple>
-        @foreach($artists as $artist)
-            <option value="{{ $artist->id }}"
-                @if( !$errors->isEmpty() )
-                    {{ in_array($artist->id, old('artist') ?? [] )?"selected":"" }}
-                @elseif( isset($concierto) )
-                    {{ $concierto->artists->contains($artist->id)?"selected":"" }}
-                @endif
-            >{{ $artist->name }}</option>
-        @endforeach
-    </select>
-    @if( $errors->has('artists') )
-    <div class="invalid-feedback">
-        {{ $errors->first('artists') }}
+        <div class="form-group">
+        <label for="price">Precio</label>
+        <input type="text" class="form-control {{ $errors->has('price')?"is-invalid":""}}" id="price" name="price" placeholder="Precio en euros" value="{{ isset($concert)?$concert->price : old('price') }}">
+        @if ( $errors->has('price') )
+        <div class="invalid-feedback">
+        {{ $errors->first('price') }}
+        </div>
+        @endif
+        </div>
     </div>
-    @endif
+
+    <div class="col">
+        <div class="form-group">
+            <label for="artists">Artistas</label>
+            <a href="/artistas/crear" class="btn btn-primary btn-sm rounded mb-2 ml-1" target="_blank">Nuevo artista</a>
+            <select class="form-control {{ $errors->has('artists')?"is-invalid":"" }}" id="artists" name="artists[]" multiple>
+                @foreach($artists as $artist)
+                    <option value="{{ $artist->id }}"
+                        @if( !$errors->isEmpty() )
+                            {{ in_array($artist->id, old('artist') ?? [] )?"selected":"" }}
+                        @elseif( isset($concierto) )
+                            {{ $concierto->artists->contains($artist->id)?"selected":"" }}
+                        @endif
+                    >{{ $artist->name }}</option>
+                @endforeach
+            </select>
+            @if( $errors->has('artists') )
+            <div class="invalid-feedback">
+                {{ $errors->first('artists') }}
+            </div>
+            @endif
+        </div>
+    </div>
 </div>
 
+<div class="row">
+    <div class="col-2">
+        <div class="form-group">
+        <label for="city">Ciudad</label>
+        <input type="text" class="form-control {{ $errors->has('city')?"is-invalid":""}}" id="city" name="city" placeholder="Ciudad del evento" value="{{ isset($concert)?$concert->city : old('city') }}">
+        @if ( $errors->has('city') )
+        <div class="invalid-feedback">
+        {{ $errors->first('city') }}
+        </div>
+        @endif
+        </div>
+    </div>
 
-<div class="form-group">
- <label for="price">Precio</label>
- <input type="text" class="form-control {{ $errors->has('price')?"is-invalid":""}}" id="price" name="price" placeholder="Precio en euros" value="{{ isset($concert)?$concert->price : old('price') }}">
- @if ( $errors->has('price') )
- <div class="invalid-feedback">
-  {{ $errors->first('price') }}
- </div>
-@endif
+    <div class="col-5">
+        <div class="form-group">
+        <label for="location">Ubicación</label>
+        <input type="text" class="form-control {{ $errors->has('location')?"is-invalid":""}}" id="location" name="location" placeholder="Lugar donde se aloja el evento" value="{{ isset($concert)?$concert->location : old('location') }}">
+        @if ( $errors->has('location') )
+        <div class="invalid-feedback">
+        {{ $errors->first('location') }}
+        </div>
+        @endif
+        </div>
+    </div>
+
+    <div class="col-5">
+        <div class="form-group">
+        <label for="address">Dirección</label>
+        <input type="text" class="form-control {{ $errors->has('address')?"is-invalid":""}}" id="address" name="address" placeholder="Dirección del lugar de celebración" value="{{ isset($concert)?$concert->address : old('address') }}">
+        @if ( $errors->has('address') )
+        <div class="invalid-feedback">
+        {{ $errors->first('address') }}
+        </div>
+        @endif
+        </div>
+    </div>
 </div>
 
-<div class="form-group">
- <label for="city">Ciudad</label>
- <input type="text" class="form-control {{ $errors->has('city')?"is-invalid":""}}" id="city" name="city" placeholder="Ciudad donde se realiza" value="{{ isset($concert)?$concert->city : old('city') }}">
- @if ( $errors->has('city') )
- <div class="invalid-feedback">
-  {{ $errors->first('city') }}
- </div>
-@endif
-</div>
+<div class="row">
+    <div class="col-2">
+        <div class="form-group">
+        <label for="date">Fecha del evento</label>
+        <input type="date" class="form-control {{ $errors->has('date')?"is-invalid":""}}" id="date" name="date" value="{{ isset($concert)?$concert->date : old('date') }}">
+        @if ( $errors->has('date') )
+        <div class="invalid-feedback">
+        {{ $errors->first('date') }}
+        </div>
+        @endif
+        </div>
+    </div>
 
-<div class="form-group">
- <label for="location">Ubicación</label>
- <input type="text" class="form-control {{ $errors->has('location')?"is-invalid":""}}" id="location" name="location" placeholder="Lugar donde se aloja el evento" value="{{ isset($concert)?$concert->location : old('location') }}">
- @if ( $errors->has('location') )
- <div class="invalid-feedback">
-  {{ $errors->first('location') }}
- </div>
-@endif
-</div>
-
-<div class="form-group">
- <label for="address">Dirección</label>
- <input type="text" class="form-control {{ $errors->has('address')?"is-invalid":""}}" id="address" name="address" placeholder="Dirección del lugar de celebración" value="{{ isset($concert)?$concert->address : old('address') }}">
- @if ( $errors->has('address') )
- <div class="invalid-feedback">
-  {{ $errors->first('address') }}
- </div>
-@endif
-</div>
-
-<div class="form-group">
- <label for="date">Fecha del evento</label>
- <input type="date" class="form-control {{ $errors->has('date')?"is-invalid":""}}" id="date" name="date" value="{{ isset($concert)?$concert->date : old('date') }}">
- @if ( $errors->has('date') )
- <div class="invalid-feedback">
-  {{ $errors->first('date') }}
- </div>
-@endif
+    <div class="col-10">
+        <div class="form-group">
+        <label for="ticket">Ticket</label>
+        <input type="text" class="form-control {{ $errors->has('ticket')?"is-invalid":""}}" id="ticket" name="ticket" placeholder="Link para comprar la entrada" value="{{ isset($concert)?$concert->ticket : old('ticket') }}">
+        @if ( $errors->has('ticket') )
+        <div class="invalid-feedback">
+        {{ $errors->first('ticket') }}
+        </div>
+        @endif
+        </div>
+    </div>
 </div>
 
 <div class="form-group">
@@ -86,16 +115,6 @@
  @if ( $errors->has('schedule') )
  <div class="invalid-feedback">
   {{ $errors->first('schedule') }}
- </div>
-@endif
-</div>
-
-<div class="form-group">
- <label for="ticket">Ticket</label>
- <input type="text" class="form-control {{ $errors->has('ticket')?"is-invalid":""}}" id="ticket" name="ticket" placeholder="Link para comprar la entrada" value="{{ isset($concert)?$concert->ticket : old('ticket') }}">
- @if ( $errors->has('ticket') )
- <div class="invalid-feedback">
-  {{ $errors->first('ticket') }}
  </div>
 @endif
 </div>

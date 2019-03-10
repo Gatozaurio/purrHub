@@ -29,7 +29,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-lg navbar-light navbar-laravel">
+        <nav id="navbar" class="navbar navbar-expand-lg navbar-light navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <i class="fas fa-cat"></i> PurrHub
@@ -110,6 +110,8 @@
 	</div>
     </div>
     @stack('scripts')
-    <script src="{{ mix('/js/general/ajaxSearch.js') }}" defer ></script>
+        <script src="{{ mix('/js/general/ajaxSearch.js') }}" defer ></script>
+    @stack('estilos')
+	    <link href="{{ mix('/css/general/general.css') }}" rel="stylesheet">
 </body>
 </html>

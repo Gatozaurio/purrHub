@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 8);
+/******/ 	return __webpack_require__(__webpack_require__.s = 10);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2014,7 +2014,7 @@ function crearElemento(event) {
 
 /***/ }),
 
-/***/ 8:
+/***/ 10:
 /*!********************************************************!*\
   !*** multi ./resources/js/comentarios/ajaxCreation.js ***!
   \********************************************************/

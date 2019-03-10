@@ -4,13 +4,16 @@
     "/css/formularios/formulario.css": "/css/formularios/formulario.css",
     "/css/concierto/concierto.css": "/css/concierto/concierto.css",
     "/css/eventos/eventos.css": "/css/eventos/eventos.css",
+    "/css/general/general.css": "/css/general/general.css",
     "/js/comentarios/ajaxCreation.js": "/js/comentarios/ajaxCreation.js",
     "/js/comentarios/ajaxEdition.js": "/js/comentarios/ajaxEdition.js",
     "/js/concierto/concierto.js": "/js/concierto/concierto.js",
+    "/js/eventos/animejs.js": "/js/eventos/animejs.js",
     "/js/eventos/eventos.js": "/js/eventos/eventos.js",
     "/js/formularios/formularios.js": "/js/formularios/formularios.js",
     "/js/general/ajaxPagination.js": "/js/general/ajaxPagination.js",
     "/js/general/ajaxSearch.js": "/js/general/ajaxSearch.js",
+    "/js/general/anime.min.js": "/js/general/anime.min.js",
     "/js/general/deleteConfirmation.js": "/js/general/deleteConfirmation.js",
     "/js/general/tooltip.js": "/js/general/tooltip.js"
 }
