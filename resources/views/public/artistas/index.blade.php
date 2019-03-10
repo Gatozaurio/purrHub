@@ -30,7 +30,8 @@
 		   <div class='btn-group d-flex'>
 		   		<!-- Botón ver -->
 			   <a href="/artistas/{{ $artist['slug'] }}" class="btn btn-primary border border-primary rounded ml-auto mr-1 col-4" data-toggle="tooltip" title="Ver artista" data-placement="bottom" data-template="@include('partials.tooltipTemplate')"><i class="fas fa-eye"></i></a>
-			   @auth
+				 @auth
+				 @can('modify', $artist)
 			   		<!-- Botón editar -->
 					<a href="/artistas/{{ $artist['id'] }}/editar" class="btn btn-primary border border-primary rounded mx-1 col-4" data-toggle="tooltip" title="Editar artista" data-placement="bottom" data-template="@include('partials.tooltipTemplate')"><i class="fas fa-edit"></i></a>
 					<!-- Botón borrar -->
@@ -39,6 +40,7 @@
 						@method('delete')
 						<button type="submit" class="btn btn-danger ml-lg-5" data-toggle="tooltip" title="Borrar artista" data-placement="bottom" data-template="@include('partials.tooltipTemplate')"><i class="fas fa-trash-alt"></i></a>
 					</form>
+					@endcan
 			   @endauth
 		   </div>
 	   </div>

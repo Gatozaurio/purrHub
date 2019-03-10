@@ -16,6 +16,9 @@ function borrarElemento(event){
 			cerrarModal('deleteConfirmation');
 			botonAceptarModal.off("click");
 			$(`div[data-idElemento='${idElemento}']`).remove();
+		}).catch(function(error){
+			alert("Ha ocurrido un error al realizar la petición");
+			console.log(error);
 		});
 	});
 }

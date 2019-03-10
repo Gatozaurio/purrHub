@@ -16,5 +16,8 @@ function crearElemento(event){
         $('#comentarios').append(respond.data).last();
         $('#message').val('');
         $('#spinner').addClass("invisible");
+    }).catch(function(error){
+        alert("Ha ocurrido un error al realizar la petición");
+        console.log(error);
     });
 }

@@ -8,6 +8,16 @@ use App\Http\Requests\ArtistRequest;
 
 class ArtistsController extends Controller
 {
+	public function __construct()
+    {
+        $this->middleware('auth', [
+            'only' => ['create' , 'store', 'edit', 'update', 'destroy', 'deleteAjax']
+        ]);
+        $this->middleware(`can:modify,artist`,[
+            'only' => ['edit', 'update', 'destroy']
+        ]);
+    }
+
 	/**
 	 * Display a listing of the resource.
 	 *

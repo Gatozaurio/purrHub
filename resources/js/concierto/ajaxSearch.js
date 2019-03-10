@@ -16,5 +16,8 @@ function buscarElementos(event){
         $('#searchSpinner').addClass("invisible");
         $("#conciertosMostrados").empty();
         $("#conciertosMostrados").append(respuesta.data);
+    }).catch(function(error){
+        alert("Ha ocurrido un error al realizar la petición");
+        console.log(error);
     });
 }

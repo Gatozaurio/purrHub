@@ -14,6 +14,9 @@ class ConcertsController extends Controller
         $this->middleware('auth', [
             'only' => ['create' , 'store', 'edit', 'update', 'destroy', 'deleteAjax']
         ]);
+        $this->middleware(`can:modify,concert`,[
+            'only' => ['edit', 'update', 'destroy']
+        ]);
     }
 
     /**

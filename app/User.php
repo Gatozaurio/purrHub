@@ -35,5 +35,12 @@ class User extends Authenticatable
     public function comments()
 	{
 		return $this->hasMany(Comment::class);
-	}
+    }
+    
+    public function ownsConcert(Concert $concert){
+        return $this->id == $concert->user_id;
+    }
+    public function ownsArtist(Artist $artist){
+        return $this->id == $artist->user_id;
+    }
 }

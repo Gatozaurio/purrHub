@@ -27,10 +27,6 @@
 	<h5><strong>Fecha: </strong>{{ $concierto['date'] }}</h5>
 	<h5><strong>Horario: </strong></h5>
 	<p>{{ $concierto['schedule'] }} - Apertura de recinto </p>
-
-	<form action="/conciertos/{{ $concierto['id'] }}/horario" data-action="show" method="get" data-elemento="$concierto['id']">
-		<button type="submit" class="btn btn-primary" >Ver artistas</a>
-	</form>
 </div>
 
 <div class="mt-5">

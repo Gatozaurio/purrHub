@@ -20,6 +20,6 @@ class ConcertPolicy
     public function modify(User $user, Concert $concert)
     {
         // Devuelve un booleano true si es correcto y false si no lo es
-        return $user->id == 2;
+        return $concert->user_id == $user->id;
     }
 }
