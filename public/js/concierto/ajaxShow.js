@@ -81,58 +81,48 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/general/deleteConfirmation.js":
-/*!****************************************************!*\
-  !*** ./resources/js/general/deleteConfirmation.js ***!
-  \****************************************************/
+/***/ "./resources/js/concierto/ajaxShow.js":
+/*!********************************************!*\
+  !*** ./resources/js/concierto/ajaxShow.js ***!
+  \********************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
 document.addEventListener('DOMContentLoaded', function () {
-  $("form[data-action='delete']").on('submit', function (event) {
-    borrarElemento(event);
+  $("form[data-action='show']").on('submit', function (event) {
+    mostrarElemento(event);
   });
 });
 
-function borrarElemento(event) {
+function mostrarElemento(event) {
   event.preventDefault();
-  mostrarModal('deleteConfirmation');
   var formulario = $(event.target);
-  var idElemento = formulario.attr("data-elementoBorrar");
-  var botonAceptarModal = $("#botonAceptarModal");
-  var elemento = formulario.attr("data-elemento");
-  botonAceptarModal.click(function () {
-    axios.delete("".concat(elemento, "/borrarAjax/").concat(idElemento)).then(function (respuesta) {
-      cerrarModal('deleteConfirmation');
-      botonAceptarModal.off("click");
-      $("div[data-idElemento='".concat(idElemento, "']")).remove();
-    });
+  var idElemento = formulario.attr("data-elemento");
+  axios.get("concierto/".concat(idElemento, "/artista")).then(function (respuesta) {
+    var artista = respuesta.data;
+    mostrarModal('deleteConfirmation', artista);
   });
 }
 
-function mostrarModal(id) {
-  $("#".concat(id)).modal('show');
-}
-
-function cerrarModal(id) {
-  $("#".concat(id)).modal('hide');
+function mostrarModal(modal) {
+  $("#".concat(modal)).modal('show');
 }
 
 /***/ }),
 
-/***/ 7:
-/*!**********************************************************!*\
-  !*** multi ./resources/js/general/deleteConfirmation.js ***!
-  \**********************************************************/
+/***/ 3:
+/*!**************************************************!*\
+  !*** multi ./resources/js/concierto/ajaxShow.js ***!
+  \**************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/gato/Sites/purrHub/resources/js/general/deleteConfirmation.js */"./resources/js/general/deleteConfirmation.js");
+module.exports = __webpack_require__(/*! /home/gato/Sites/purrHub/resources/js/concierto/ajaxShow.js */"./resources/js/concierto/ajaxShow.js");
 
 
 /***/ })

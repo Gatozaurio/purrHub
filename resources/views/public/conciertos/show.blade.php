@@ -27,6 +27,10 @@
 	<h5><strong>Fecha: </strong>{{ $concierto['date'] }}</h5>
 	<h5><strong>Horario: </strong></h5>
 	<p>{{ $concierto['schedule'] }} - Apertura de recinto </p>
+
+	<form action="/conciertos/{{ $concierto['id'] }}/horario" data-action="show" method="get" data-elemento="$concierto['id']">
+		<button type="submit" class="btn btn-primary" >Ver artistas</a>
+	</form>
 </div>
 
 <div class="mt-5">
@@ -69,7 +73,7 @@
 				@endif
 			</div>
 
-			<button type="submit" class="btn btn-primary">Enviar</button>
+			<button type="submit" class="btn btn-success">Enviar</button>
 			<div class="spinner-border invisible ml-3" id="spinner"></div>
 		</form>
 		@endauth
@@ -78,6 +82,7 @@
 @endsection
 @push('scripts')
 	<script src="{{ mix('/js/concierto/concierto.js') }}" defer ></script>
+	<script src="{{ mix('/js/concierto/ajaxShow.js') }}" defer ></script>
 	<script src="{{ mix('/js/comentarios/ajaxCreation.js') }}" defer ></script>
 	<script src="{{ mix('/js/comentarios/ajaxEdition.js') }}" defer ></script>
 @endpush

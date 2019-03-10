@@ -57,17 +57,6 @@
 						  <a class="nav-link" href="/acercade">Acerca de</a>
 						</li>
                     </ul>
-                    <!-- Barra de búsqueda -->
-                    <ul class="navbar-nav col-md-4 col-xl-5 ml-auto">
-                        <form class="w-100" action="conciertos/buscarAjax" data-action="search">
-                            <div class="input-group input-group-sm mt-2">
-                                <div class="input-group-prepend">
-                                    <button class="btn btn-outline-secondary" type="submit"><i class="fas fa-search"></i></button>
-                                </div>
-                                <input type="text" class="form-control mr-1 col-12" placeholder="" aria-label="" aria-describedby="basic-addon1">
-                            </div>
-                        </form> 
-                    </ul>
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
@@ -110,7 +99,6 @@
 	</div>
     </div>
     @stack('scripts')
-        <script src="{{ mix('/js/general/ajaxSearch.js') }}" defer ></script>
     @stack('estilos')
 	    <link href="{{ mix('/css/general/general.css') }}" rel="stylesheet">
 </body>

@@ -147,8 +147,9 @@ class ConcertsController extends Controller
 
     public function searchAjax()
 	{
-        $search = request('search');
-        $conciertos = Concert::where('name', 'like', '%'.$search.'%' )->get();
+        sleep(1);
+        $searchInput = request('searchInput');
+        $conciertos = Concert::where('name', 'like', '%'.$searchInput.'%' )->get();
         return view('public.conciertos.partials.showConcerts', ['concerts' => $conciertos]);
     }
     

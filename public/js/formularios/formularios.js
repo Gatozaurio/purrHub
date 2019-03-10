@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -149,7 +149,7 @@ function realizarValidacion(datosPost, funcionCallback) {
 
 /***/ }),
 
-/***/ 4:
+/***/ 6:
 /*!*******************************************************!*\
   !*** multi ./resources/js/formularios/formularios.js ***!
   \*******************************************************/

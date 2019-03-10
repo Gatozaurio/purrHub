@@ -1,16 +1,19 @@
 import Axios from "axios";
 
 document.addEventListener('DOMContentLoaded',function(){
-    $("form[data-action='search']").on('submit',function(event) {
-		buscarElementos(event);
-	});
+    let searchConcert = $('#searchConcert');
+    searchConcert.submit(function(event){
+        buscarElementos(event);
+    });
 });
 
 function buscarElementos(event){
     event.preventDefault();
+    $('#searchSpinner').removeClass("invisible");
     axios.post('conciertos/buscarAjax',{
-        search: $("#search").val()
+        searchInput: $("#searchInput").val()
     }).then(function(respuesta){
+        $('#searchSpinner').addClass("invisible");
         $("#conciertosMostrados").empty();
         $("#conciertosMostrados").append(respuesta.data);
     });

@@ -116,3 +116,58 @@ Una vez seguido los pasos anteriores podemos acceder al proyecto desde el navega
 
        *Botón de crear eventos*
 
+     - Nav
+
+       *Barra de navegación principal*
+
+     - NavBar
+
+       *Barra de navegación principal*
+
+     - Badges
+
+       *Número de conciertos que da un artista en su card*
+
+     - Alertas
+
+     - Carousel
+
+       *Carousel de la página inicial*
+
+     - Jumbotron
+
+       *Contenedor del vídeo en la página principal*
+
+     - Forms
+
+       *Formulario de creación de concierto*
+
+     - Validación de forms
+
+       *Formulario de creación de conciertos*
+
+       *Formulario de edición de conciertos*
+
+       *Formulario de creación de artistas*
+
+       *Formulario de edición de artistas*
+
+     - Input group
+
+       *Barra de búsqueda*
+
+     - Modal
+
+       *Confirmación de borrado de conciertos*
+
+       *Confirmación de borrado de artistas*
+
+     - Tooltip
+
+       *Varios tooltips en los botones de la página*
+
+     - ListGroup
+
+
+         *Comentarios de los conciertos*
+
