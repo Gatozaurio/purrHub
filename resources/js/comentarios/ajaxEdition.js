@@ -1,13 +1,17 @@
 import Axios from "axios";
 
 document.addEventListener('DOMContentLoaded', function(){
-    $("#formulario").submit(function(event){
+    alert('carga el dom');
+    $("#editButton").click(function(event) {
+        alert('click');
         editarElemento(event);
     });
 });
+// "/comentarios/{{ $comentario['id'] }}/editar"
 
 function editarElemento(event){
     event.preventDefault();
+    alert('hola');
         let formulario = $(event.target);
         let idElemento = formulario.attr("data-elementoBorrar");
         let datosFormulario = formulario.serialize();

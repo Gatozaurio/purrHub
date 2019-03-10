@@ -156,7 +156,7 @@ function realizarValidacion(datosPost, funcionCallback) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/gato/Sites/purrhub/resources/js/formularios/formularios.js */"./resources/js/formularios/formularios.js");
+module.exports = __webpack_require__(/*! /home/gato/Sites/purrHub/resources/js/formularios/formularios.js */"./resources/js/formularios/formularios.js");
 
 
 /***/ })

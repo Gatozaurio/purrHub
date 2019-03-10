@@ -1,4 +1,4 @@
-@forelse ($concerts as $concert)
+@foreach($concerts as $concert)
 	<div data-idElemento="{{ $concert['id'] }}" class=" mr-lg-4 mr-md-2 mt-4 col-12 col-lg-3 col-md-6">
 		<div class="card" style="width: 18rem;">
 			<div class="card-header">
@@ -13,6 +13,7 @@
 					<!-- Botón ver -->
 					<a href="/conciertos/{{ $concert['slug'] }}" class="btn btn-primary border border-primary rounded ml-auto mr-1 col-4" data-toggle="tooltip"
 					title="Ver concierto" data-placement="bottom" data-template="@include('partials.tooltipTemplate')"><i class="fas fa-eye"></i></a>
+					
 					@auth
 						<!-- Botón editar -->
 						<a href="/conciertos/{{ $concert['id'] }}/editar" class="btn btn-primary border border-primary rounded mx-1 col-4" data-toggle="tooltip" title="Editar concierto" data-placement="bottom" data-template="@include('partials.tooltipTemplate')"><i class="fas fa-edit"></i></a>
@@ -27,6 +28,4 @@
 			</div>
 		</div>
 	</div>
-	@empty
-	<p>No hay conciertos</p>
-	@endforelse
+	@endforeach

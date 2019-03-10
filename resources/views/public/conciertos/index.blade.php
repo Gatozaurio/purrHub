@@ -27,7 +27,14 @@
 	</div>
 </div>
 
+<div class="mx-auto col-1 mt-2">
+<div class="">
+		<div class="spinner-border" id="spinner"></div>
+		</div>
+</div>
+
 @include('partials.deleteModal')
+@include('partials.sinElementos')
 
 @endsection
 

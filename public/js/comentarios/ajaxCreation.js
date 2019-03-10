@@ -2001,12 +2001,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function crearElemento(event) {
   event.preventDefault();
+  $('#spinner').removeClass("invisible");
   axios.post('/comentarios', {
     id_concierto: $('#id_concierto').val(),
     message: $('#message').val()
   }).then(function (respond) {
     $('#comentarios').append(respond.data).last();
     $('#message').val('');
+    $('#spinner').addClass("invisible");
   });
 }
 
@@ -2019,7 +2021,7 @@ function crearElemento(event) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/gato/Sites/purrhub/resources/js/comentarios/ajaxCreation.js */"./resources/js/comentarios/ajaxCreation.js");
+module.exports = __webpack_require__(/*! /home/gato/Sites/purrHub/resources/js/comentarios/ajaxCreation.js */"./resources/js/comentarios/ajaxCreation.js");
 
 
 /***/ })

@@ -100,16 +100,24 @@ document.addEventListener('DOMContentLoaded', function () {
     var scrollPosition = $(window).height() + $(window).scrollTop();
 
     if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
+      $('#spinner').removeClass("invisible");
       axios.get('conciertos/paginacion/ajax/' + contadorConciertos).then(function (respuesta) {
-        if (respuesta.data === "") {//$('#modalSinElementos')
+        if (respuesta.data === "") {
+          mostrarModal('sinElementos');
         } else {
           $("#conciertosMostrados").append(respuesta.data);
           contadorConciertos += 12;
         }
+
+        $('#spinner').addClass("invisible");
       });
     }
   });
 });
+
+function mostrarModal(modal) {
+  $("#".concat(modal)).modal('show');
+}
 
 /***/ }),
 
@@ -120,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/gato/Sites/purrhub/resources/js/general/ajaxPagination.js */"./resources/js/general/ajaxPagination.js");
+module.exports = __webpack_require__(/*! /home/gato/Sites/purrHub/resources/js/general/ajaxPagination.js */"./resources/js/general/ajaxPagination.js");
 
 
 /***/ })

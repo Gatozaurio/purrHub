@@ -61,6 +61,7 @@
 			</div>
 
 			<button type="submit" class="btn btn-primary">Enviar</button>
+			<div class="spinner-border invisible ml-3" id="spinner"></div>
 		</form>
 		@endauth
 </div>
@@ -69,6 +70,7 @@
 @push('scripts')
 	<script src="{{ mix('/js/concierto/concierto.js') }}" defer ></script>
 	<script src="{{ mix('/js/comentarios/ajaxCreation.js') }}" defer ></script>
+	<script src="{{ mix('/js/comentarios/ajaxEdition.js') }}" defer ></script>
 @endpush
 @push('estilos')
 	<link href="{{ mix('/css/concierto/concierto.css') }}" rel="stylesheet">

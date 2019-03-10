@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 9);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1981,10 +1981,10 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
-/***/ "./resources/js/general/ajaxSearch.js":
-/*!********************************************!*\
-  !*** ./resources/js/general/ajaxSearch.js ***!
-  \********************************************/
+/***/ "./resources/js/comentarios/ajaxEdition.js":
+/*!*************************************************!*\
+  !*** ./resources/js/comentarios/ajaxEdition.js ***!
+  \*************************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1994,31 +1994,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 
 document.addEventListener('DOMContentLoaded', function () {
-  $("form[data-action='search']").on('submit', function (event) {
-    buscarElementos(event);
+  alert('carga el dom');
+  $("#editButton").click(function (event) {
+    alert('click');
+    editarElemento(event);
   });
-});
+}); // "/comentarios/{{ $comentario['id'] }}/editar"
 
-function buscarElementos(event) {
+function editarElemento(event) {
   event.preventDefault();
-  axios.post('conciertos/buscarAjax', {
-    search: $("#search").val()
-  }).then(function (respuesta) {
-    $("#conciertosMostrados").empty();
-    $("#conciertosMostrados").append(respuesta.data);
-  });
+  alert('hola');
+  var formulario = $(event.target);
+  var idElemento = formulario.attr("data-elementoBorrar");
+  var datosFormulario = formulario.serialize();
+  axios.put("editarConcierto/ajax/idDelConcierto", datosFormulario).then(function (respuesta) {});
 }
 
 /***/ }),
 
-/***/ 5:
-/*!**************************************************!*\
-  !*** multi ./resources/js/general/ajaxSearch.js ***!
-  \**************************************************/
+/***/ 9:
+/*!*******************************************************!*\
+  !*** multi ./resources/js/comentarios/ajaxEdition.js ***!
+  \*******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/gato/Sites/purrHub/resources/js/general/ajaxSearch.js */"./resources/js/general/ajaxSearch.js");
+module.exports = __webpack_require__(/*! /home/gato/Sites/purrHub/resources/js/comentarios/ajaxEdition.js */"./resources/js/comentarios/ajaxEdition.js");
 
 
 /***/ })

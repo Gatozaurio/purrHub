@@ -13,7 +13,8 @@ class CommentsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    {   
+        sleep(1);
         $comentario = Comment::create([
             'user_id'   =>  $request->user()->id,
             'concert_id'   =>  request('id_concierto'),

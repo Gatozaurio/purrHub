@@ -154,8 +154,8 @@ class ConcertsController extends Controller
     
     public function paginateAjax($contador)
 	{
+        sleep(1);
         $conciertos = Concert::skip($contador)->take(12)->get();
-
         $view = "";
         if(!empty($conciertos)){
             $view = view('public.conciertos.partials.showConcerts', ['concerts' => $conciertos]);

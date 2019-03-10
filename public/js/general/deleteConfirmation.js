@@ -132,7 +132,7 @@ function cerrarModal(id) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/gato/Sites/purrhub/resources/js/general/deleteConfirmation.js */"./resources/js/general/deleteConfirmation.js");
+module.exports = __webpack_require__(/*! /home/gato/Sites/purrHub/resources/js/general/deleteConfirmation.js */"./resources/js/general/deleteConfirmation.js");
 
 
 /***/ })

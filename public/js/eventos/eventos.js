@@ -114,7 +114,7 @@ $(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/gato/Sites/purrhub/resources/js/eventos/eventos.js */"./resources/js/eventos/eventos.js");
+module.exports = __webpack_require__(/*! /home/gato/Sites/purrHub/resources/js/eventos/eventos.js */"./resources/js/eventos/eventos.js");
 
 
 /***/ })

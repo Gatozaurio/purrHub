@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/gato/Sites/purrhub/resources/js/general/tooltip.js */"./resources/js/general/tooltip.js");
+module.exports = __webpack_require__(/*! /home/gato/Sites/purrHub/resources/js/general/tooltip.js */"./resources/js/general/tooltip.js");
 
 
 /***/ })
