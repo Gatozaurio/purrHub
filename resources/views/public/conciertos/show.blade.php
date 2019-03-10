@@ -80,7 +80,6 @@
 	<script src="{{ mix('/js/concierto/concierto.js') }}" defer ></script>
 	<script src="{{ mix('/js/concierto/ajaxShow.js') }}" defer ></script>
 	<script src="{{ mix('/js/comentarios/ajaxCreation.js') }}" defer ></script>
-	<script src="{{ mix('/js/comentarios/ajaxEdition.js') }}" defer ></script>
 @endpush
 @push('estilos')
 	<link href="{{ mix('/css/concierto/concierto.css') }}" rel="stylesheet">

@@ -7,7 +7,17 @@ use Illuminate\Http\Request;
 use App\Http\Requests\CommentRequest;
 
 class CommentsController extends Controller
-{
+{   
+    public function __construct()
+    {
+        $this->middleware('auth', [
+            'only' => ['create' , 'store', 'edit', 'update', 'destroy']
+        ]);
+        $this->middleware(`can:modify,comment`,[
+            'only' => ['edit', 'update', 'destroy']
+        ]);
+    }
+
      /**
      * Store a newly created resource in storage.
      *

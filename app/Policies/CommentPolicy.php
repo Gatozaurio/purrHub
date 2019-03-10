@@ -3,20 +3,20 @@
 namespace App\Policies;
 
 use App\User;
-use App\Artist;
+Use App\Comment;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class ArtistPolicy
+class CommentPolicy
 {
     use HandlesAuthorization;
 
-    /**
+   /**
      * Create a new policy instance.
      * @param  \App\User  $user
-     * @param  \App\Artist  $artist
+     * @param  \App\Comment  $comment
      * @return mixed
      */
-    public function modify(User $user, Artist $artist){
-        return $artist->user_id == $user ->id || $user->admin == 'Y';
+    public function modify(User $user, Comment $comment){
+        return $comment->user_id == $user ->id || $user->admin == 'Y';
     }
 }

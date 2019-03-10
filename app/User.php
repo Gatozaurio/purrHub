@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'admin'
     ];
 
     /**
@@ -42,5 +42,8 @@ class User extends Authenticatable
     }
     public function ownsArtist(Artist $artist){
         return $this->id == $artist->user_id;
+    }
+    public function ownsComment(Comment $comment){
+        return $this->id == $comment->user_id;
     }
 }
